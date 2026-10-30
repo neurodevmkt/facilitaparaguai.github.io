@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <!-- SEO & Otimização -->
+    <title>Lara Ribas | Facilita Paraguai - Assessoria para Medicina e Imigração</title>
+    <meta name="description" content="Ajudo brasileiros e argentinos a realizarem o sonho de morar e estudar Medicina no Paraguai. Assessoria completa para faculdade, migração e adaptação.">
+    <meta name="keywords" content="Medicina no Paraguai, Assessoria Medicina, UCP, Estudar no Paraguai, Imigração Paraguai, Lara Ribas, Facilita Paraguai">
+    <meta name="author" content="Lara Ribas">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://www.facilitaparaguai.com.br/">
+
+    <!-- Open Graph (Redes Sociais) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Facilita Paraguai">
+    <meta property="og:title" content="Lara Ribas | Assessoria Estudantil e Imigração no Paraguai">
+    <meta property="og:description" content="Realize o sonho de estudar Medicina no Paraguai com segurança e acompanhamento completo.">
+    <meta property="og:url" content="https://www.facilitaparaguai.com.br/">
+    <meta property="og:image" content="lara_poster.jpg">
+
+    <!-- Pré-carrega o vídeo e o poster do hero -->
+    <link rel="preload" as="image" href="lara_poster.jpg">
+
+    <!-- Fontes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Fomantic UI Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css">
+
+    <style>
+        /* ================= VARIÁVEIS E RESET ================= */
+        :root {
+            --bg: #ffffff;
+            --bg-alt: #fdfafb;
+            --bg-card: #ffffff;
+            --ink: #2b2d42;
+            --mute: #6c757d;
+            --black: #000000;
+            --line: #f1e3e8;
+            --pink-main: #e84393;
+            --pink-light: #fd79a8;
+            --pink-bg: #fff0f5;
+            --grad: linear-gradient(135deg, var(--pink-light), var(--pink-main));
+            --pad: clamp(20px, 5vw, 56px);
+            --font-title: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 { font-family: var(--font-title); color: var(--ink); font-weight: 600; }
+        em { font-style: italic; color: var(--pink-main); }
+        .gt { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .gt em { color: transparent; }
+        a { color: inherit; text-decoration: none; transition: .3s; }
+        p { color: var(--mute); font-size: 1rem; margin-bottom: 1rem; }
+
+        .wrap { max-width: 1160px; margin: 0 auto; padding: 0 var(--pad); }
+        .sec { padding: clamp(4.5rem, 11vw, 7rem) 0; }
+        .sec h2 { font-size: clamp(2.2rem, 5vw, 3.2rem); margin-bottom: 1rem; }
+
+        .eyebrow {
+            display: inline-block; font-size: .75rem; letter-spacing: .15em;
+            text-transform: uppercase; color: var(--pink-main);
+            font-weight: 700; margin-bottom: 1rem; font-family: var(--font-body);
+            background: var(--pink-bg); padding: .4rem 1rem; border-radius: 99px;
+        }
+
+        /* BOTÕES */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+            min-height: 52px; padding: 0 2rem; border-radius: 99px;
+            background: var(--grad); color: #fff; font-weight: 600; font-size: .95rem;
+            border: 0; cursor: pointer; transition: all .3s cubic-bezier(.2,.8,.2,1);
+            box-shadow: 0 8px 25px rgba(232, 67, 147, 0.25);
+            font-family: var(--font-body);
+        }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(232, 67, 147, 0.4); color: #fff; }
+        .btn.ghost { background: transparent; color: var(--pink-main); border: 2px solid var(--pink-main); box-shadow: none; }
+        .btn.ghost:hover { background: var(--pink-main); color: #fff; }
+
+        /* NAV */
+        .nav {
+            position: fixed; inset: 0 0 auto 0; z-index: 50;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: calc(15px + env(safe-area-inset-top, 0px)) var(--pad) 15px;
+            transition: background .4s, box-shadow .4s;
+        }
+        .nav.solid { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .logo { font-family: var(--font-title); font-size: 1.4rem; font-weight: 700; color: var(--ink); }
+        .logo span { color: var(--pink-main); }
+        .nav ul { display: none; list-style: none; gap: 28px; font-size: .9rem; font-weight: 500; }
+        .nav ul a:hover { color: var(--pink-main); }
+        .nav .btn { min-height: 44px; padding: 0 1.2rem; font-size: .85rem; }
+
+        /* HERO - VÍDEO CONTROLADO PELO SCROLL */
+        .story { position: relative; height: 400vh; }
+        .stage { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; background: #fff; }
+        .stage video, .stage .poster {
+            position: absolute; inset: 0; width: 100%; height: 100%;
+            object-fit: cover; object-position: center;
+        }
+        .stage video { transform: translateZ(0); will-change: contents; }
+        .stage .poster { background: url('lara_poster.jpg') center/cover no-repeat; }
+
+        /* Overlay claro para leitura */
+        .stage::after {
+            content: ""; position: absolute; inset: 0; pointer-events: none;
+            background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 45%, rgba(255,255,255,0.3) 100%);
+        }
+
+        .beat {
+            position: absolute; z-index: 3; left: var(--pad); right: var(--pad);
+            bottom: calc(15svh + env(safe-area-inset-bottom, 0px));
+            opacity: 0; transform: translateY(30px); pointer-events: none;
+            will-change: opacity, transform; transition: opacity .5s ease, transform .5s ease;
+        }
+        .beat.on { opacity: 1; transform: translateY(0); pointer-events: auto; }
+        .beat h1, .beat h2 { font-size: clamp(2.4rem, 8vw, 4.5rem); margin-bottom: 1rem; line-height: 1.1; color: var(--ink); }
+        .beat p { color: var(--black); font-size: clamp(1rem, 3vw, 1.15rem); max-width: 50ch; font-weight: 500; }
+        .beat .row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+
+        .hud {
+            position: absolute; z-index: 4; left: var(--pad); right: var(--pad);
+            bottom: calc(3svh + env(safe-area-inset-bottom, 0px));
+            display: flex; align-items: center; gap: 12px;
+            font-size: .7rem; letter-spacing: .15em; text-transform: uppercase; color: var(--pink-main); font-weight: 600;
+        }
+        .hud i { flex: 1; height: 3px; background: rgba(232, 67, 147, 0.15); border-radius: 2px; position: relative; overflow: hidden; max-width: 200px; }
+        .hud b { position: absolute; inset: 0; background: var(--grad); transform-origin: left; transform: scaleX(0); will-change: transform; }
+
+        /* ESTATÍSTICAS */
+        .stats-wrap {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;
+            padding: 3rem; background: var(--pink-bg); border-radius: 24px;
+            margin-top: -50px; position: relative; z-index: 10; box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+        }
+        .stat-item h3 { font-size: clamp(2.5rem, 6vw, 3.5rem); color: var(--pink-main); line-height: 1; margin-bottom: .5rem; }
+        .stat-item p { margin: 0; font-size: .95rem; font-weight: 500; color: var(--ink); text-transform: uppercase; letter-spacing: .05em; }
+
+        /* SOBRE & TRAJETÓRIA */
+        .split { display: grid; gap: 4rem; align-items: center; }
+        .img-grid { position: relative; border-radius: 24px; overflow: hidden; aspect-ratio: 4/5; box-shadow: 0 20px 50px rgba(232, 67, 147, 0.15); }
+        .img-grid img { width: 100%; height: 100%; object-fit: cover; }
+
+        .timeline { list-style: none; margin-top: 2.5rem; position: relative; padding-left: 2rem; }
+        .timeline::before { content: ""; position: absolute; left: 6px; top: 0; bottom: 0; width: 2px; background: var(--line); }
+        .timeline li { position: relative; margin-bottom: 2.5rem; }
+        .timeline li::before {
+            content: ""; position: absolute; left: -2rem; top: .4rem;
+            width: 14px; height: 14px; border-radius: 50%; background: var(--pink-main);
+            box-shadow: 0 0 0 4px var(--pink-bg);
+        }
+        .timeline h4 { font-family: var(--font-body); font-size: 1.15rem; color: var(--ink); display: flex; align-items: center; gap: .5rem; margin-bottom: .5rem; }
+        .timeline p { font-size: .95rem; margin: 0; }
+
+        /* SERVIÇOS */
+        .bg-alt { background-color: var(--bg-alt); }
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 2rem; margin-top: 3rem; }
+        .card {
+            background: var(--bg-card); padding: 2.5rem; border-radius: 24px;
+            border: 1px solid var(--line); transition: .4s ease;
+            display: flex; flex-direction: column; height: 100%;
+        }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(232, 67, 147, 0.08); border-color: var(--pink-light); }
+        .card.featured { border-color: var(--pink-main); box-shadow: 0 10px 30px rgba(232, 67, 147, 0.1); }
+        .card-icon { width: 60px; height: 60px; border-radius: 16px; background: var(--pink-bg); color: var(--pink-main); display: grid; place-items: center; font-size: 1.8rem; margin-bottom: 1.5rem; }
+        .card h3 { font-size: 1.4rem; margin-bottom: 1rem; }
+        .card p { flex-grow: 1; }
+        .card .btn { width: 100%; margin-top: 1.5rem; }
+        .badge { align-self: flex-start; display: inline-block; font-size: .7rem; background: var(--pink-main); color: #fff; padding: .2rem .8rem; border-radius: 99px; margin-bottom: 1rem; font-weight: 600; letter-spacing: .05em; }
+        .badge.dark { background: var(--ink); }
+        .center-head { text-align: center; max-width: 600px; margin: 0 auto; }
+
+        /* PARCEIROS */
+        .split.partners { grid-template-columns: 1fr; }
+        .partner-card {
+            display: flex; align-items: center; gap: 1.5rem; padding: 2rem;
+            background: #fff; border: 1px solid var(--line); border-radius: 16px;
+            margin-bottom: 1.5rem; transition: .3s;
+        }
+        .partner-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .partner-card h4 { margin-bottom: .2rem; }
+        .partner-card p { font-size: .9rem; margin: 0; }
+        .partner-icon { font-size: 2.5rem; color: var(--pink-main); }
+
+        /* FORMULÁRIO DE CONTATO */
+        .contact-box {
+            background: #fff; padding: clamp(1.5rem, 5vw, 3rem); border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+            border: 1px solid var(--line);
+        }
+        .form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); gap: 1.5rem; }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-weight: 600; font-size: .9rem; margin-bottom: .5rem; color: var(--ink); }
+        .form-control {
+            width: 100%; padding: 14px 16px; border: 1px solid var(--line);
+            border-radius: 12px; font-family: var(--font-body); font-size: 1rem;
+            background: var(--bg-alt); color: var(--ink); transition: .3s;
+        }
+        .form-control:focus { outline: none; border-color: var(--pink-main); background: #fff; box-shadow: 0 0 0 4px var(--pink-bg); }
+        textarea.form-control { resize: vertical; min-height: 120px; }
+        .btn.block { width: 100%; font-size: 1.1rem; padding: 18px; }
+
+        /* FOOTER */
+        footer { background: var(--ink); color: #fff; padding: 4rem 0 calc(2rem + env(safe-area-inset-bottom, 0px)); text-align: center; }
+        footer .logo { color: #fff; font-size: 1.8rem; margin-bottom: 1rem; }
+        footer .logo span { color: var(--pink-light); }
+        .social-links { display: flex; justify-content: center; gap: 1rem; margin: 2rem 0; }
+        .social-links a {
+            width: 45px; height: 45px; border-radius: 50%; background: rgba(255,255,255,0.1);
+            display: grid; place-items: center; font-size: 1.2rem; color: #fff;
+        }
+        .social-links a:hover { background: var(--pink-main); transform: translateY(-3px); }
+        footer p { color: rgba(255,255,255,0.5); font-size: .85rem; }
+        footer p.copy { margin-top: 2rem; }
+
+        /* ANIMAÇÕES (REVEAL) */
+        .rv { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s ease; }
+        .rv.in { opacity: 1; transform: translateY(0); }
+
+        @media (min-width: 768px) {
+            .nav ul { display: flex; }
+            .nav .btn { min-height: 52px; padding: 0 2rem; font-size: .95rem; }
+            .stats-wrap { grid-template-columns: repeat(4, 1fr); padding: 4rem; margin-top: -80px; }
+            .split { grid-template-columns: 1fr 1fr; }
+            .split.partners { grid-template-columns: 1fr 1.2fr; }
+            .story { height: 450vh; }
+        }
+        @media (max-width: 480px) {
+            .nav .btn span { display: none; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .rv { opacity: 1; transform: none; transition: none; }
+            .beat { transition: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="nav" id="nav">
+        <a href="#topo" class="logo">Facilita<span>Paraguai</span></a>
+        <ul>
+            <li><a href="#sobre">Sobre Lara</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#parceiros">Parceiros</a></li>
+        </ul>
+        <a href="#contato" class="btn"><i class="whatsapp icon"></i> Fale com a Lara</a>
+    </header>
+
+    <main>
+        <!-- 1. HERO (VÍDEO NO SCROLL) -->
+        <section class="story" id="topo">
+            <div class="stage">
+                <div class="poster"></div>
+                <video id="v" muted playsinline preload="auto" poster="lara_poster.jpg" disablepictureinpicture disableremoteplayback tabindex="-1" aria-hidden="true">
+                    <source src="lara_hero.mp4" type="video/mp4">
+                </video>
+
+                <!-- Passo 1 -->
+                <div class="beat" data-a="-1" data-b="0.25">
+                    <span class="eyebrow">Assessoria Estudantil e Imigração</span>
+                    <h1>Sua ponte para a <span class="gt"><em>Medicina no Paraguai</em></span></h1>
+                    <p>Ajudo brasileiros a realizarem o sonho de morar e estudar medicina no exterior com segurança, documentação correta e adaptação tranquila.</p>
+                    <div class="row">
+                        <a href="#servicos" class="btn">Conhecer Serviços</a>
+                        <a href="#sobre" class="btn ghost">Conhecer a Lara</a>
+                    </div>
+                </div>
+
+                <!-- Passo 2 -->
+                <div class="beat" data-a="0.30" data-b="0.55">
+                    <span class="eyebrow">Acompanhamento Completo</span>
+                    <h2>Zero burocracia, <span class="gt"><em>foco nos estudos.</em></span></h2>
+                    <p>Desde a matrícula na faculdade (UCP) até a documentação de imigração e busca de moradia. Nós cuidamos do processo burocrático para você.</p>
+                </div>
+
+                <!-- Passo 3 -->
+                <div class="beat" data-a="0.60" data-b="3">
+                    <span class="eyebrow">Dê o primeiro passo</span>
+                    <h2>Pronto para <span class="gt"><em>começar?</em></span></h2>
+                    <p>Fale diretamente comigo no WhatsApp e tire todas as suas dúvidas sobre a jornada médica no Paraguai.</p>
+                    <div class="row">
+                        <a href="#contato" class="btn"><i class="whatsapp icon"></i> Chamar no WhatsApp</a>
+                    </div>
+                </div>
+
+                <div class="hud" aria-hidden="true"><span>Rolar Página</span><i><b id="bar"></b></i></div>
+            </div>
+        </section>
+
+        <!-- 2. ESTATÍSTICAS -->
+        <section style="background: var(--bg-alt); padding-bottom: 4rem;">
+            <div class="wrap">
+                <div class="stats-wrap rv" id="stats">
+                    <div class="stat-item">
+                        <h3><span class="counter" data-target="276">0</span>K+</h3>
+                        <p>Seguidores nas Redes</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3><span class="counter" data-target="600">0</span>+</h3>
+                        <p>Brasileiros Assessorados</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3><span class="counter" data-target="5">0</span> Anos</h3>
+                        <p>Vivendo no Exterior</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3><span class="counter" data-target="15">0</span>M+</h3>
+                        <p>Visualizações</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SOBRE & TRAJETÓRIA -->
+        <section class="sec" id="sobre">
+            <div class="wrap split">
+                <div class="img-grid rv">
+                    <img src="https://facilitaparaguai.com/assets/lara1-BVRDoIIc.jpg" alt="Lara Ribas - Estudante de Medicina" loading="lazy" decoding="async">
+                </div>
+                <div class="rv">
+                    <span class="eyebrow"><i class="heartbeat icon"></i> Sobre a Lara Ribas</span>
+                    <h2>Empresária, Estudante de Medicina e <span class="gt"><em>Assessora</em></span></h2>
+                    <p>Brasileira que já morou na Argentina e há 3 anos vive no Paraguai. Uma jornada que começou no Brasil e hoje inspira centenas de pessoas a realizarem o sonho da Medicina.</p>
+
+                    <ul class="timeline">
+                        <li>
+                            <h4>🇧🇷 Brasil</h4>
+                            <p>Aos 17 anos, enfrentei um dos maiores desafios da minha vida: a perda do meu pai. Diante da nova realidade financeira, decidi que o luto não interromperia meu sonho de ser médica. Emancipei-me e parti em busca de oportunidades.</p>
+                        </li>
+                        <li>
+                            <h4>🇦🇷 Argentina</h4>
+                            <p>Vivi as dificuldades reais de ser uma estudante internacional. Enfrentei metodologias exaustivas e falta de suporte. Senti na pele como a escolha equivocada de destino pode afetar a saúde mental e o desempenho.</p>
+                        </li>
+                        <li>
+                            <h4>🇵🇾 Paraguai</h4>
+                            <p>Encontrei excelência acadêmica na UCP, carga horária alinhada ao Brasil e qualidade de vida. Vendi tudo, reinvesti no meu futuro, consegui aproveitamento das matérias e ingressei direto no 4º semestre. Hoje, ajudo você a ter um caminho mais fácil.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SERVIÇOS -->
+        <section class="sec bg-alt" id="servicos">
+            <div class="wrap">
+                <div class="rv center-head">
+                    <span class="eyebrow">Produtos &amp; Serviços</span>
+                    <h2>Soluções para sua <span class="gt"><em>jornada</em></span></h2>
+                    <p>Conheça as soluções que preparei para facilitar sua vida acadêmica e imigratória no Paraguai.</p>
+                </div>
+
+                <div class="cards-grid rv">
+                    <div class="card">
+                        <span class="badge">R$ 27</span>
+                        <div class="card-icon"><i class="book icon"></i></div>
+                        <h3>Guia de Medicina no Paraguai</h3>
+                        <p>E-book completo sobre estudar Medicina na UCP: mensalidades, matrícula, visto, moradia, custo de vida e convalidação de diploma.</p>
+                        <a href="#contato" class="btn ghost" data-interest="Guia de Medicina (E-book)">Saiba mais</a>
+                    </div>
+
+                    <div class="card featured">
+                        <span class="badge">POPULAR</span>
+                        <div class="card-icon"><i class="user md icon"></i></div>
+                        <h3>Assessoria para Medicina</h3>
+                        <p>Acompanhamento completo e personalizado para você ingressar na faculdade de Medicina no Paraguai sem dores de cabeça.</p>
+                        <a href="#contato" class="btn" data-interest="Assessoria para Medicina">Saiba mais</a>
+                    </div>
+
+                    <div class="card">
+                        <span class="badge dark">COMPLETO</span>
+                        <div class="card-icon"><i class="passport icon"></i></div>
+                        <h3>Assessoria para Migração</h3>
+                        <p>Suporte total para a sua mudança de país: emissão de documentação, trâmites de residência e auxílio na adaptação cultural.</p>
+                        <a href="#contato" class="btn ghost" data-interest="Assessoria para Migração">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. PARCEIROS -->
+        <section class="sec" id="parceiros">
+            <div class="wrap split partners">
+                <div class="rv">
+                    <span class="eyebrow">Marcas que confio</span>
+                    <h2>Parceiros &amp; <span class="gt"><em>Publicidade</em></span></h2>
+                    <p>Quer divulgar sua marca para milhares de brasileiros interessados em estudar e morar no Paraguai? Vamos conversar sobre uma parceria!</p>
+                    <a href="#contato" class="btn" style="margin-top: 1rem;" data-interest="Parcerias e Publicidade"><i class="bullhorn icon"></i> Anuncie para milhares</a>
+                </div>
+
+                <div class="rv">
+                    <div class="partner-card">
+                        <div class="partner-icon"><i class="mobile alternate icon"></i></div>
+                        <div>
+                            <h4>ClinicBook</h4>
+                            <p>Protocolos clínicos atualizados, IA médica, flashcards, simulados e conteúdos 100% offline em um único app.</p>
+                        </div>
+                    </div>
+                    <div class="partner-card">
+                        <div class="partner-icon"><i class="user shield icon"></i></div>
+                        <div>
+                            <h4>Dana Jalecos</h4>
+                            <p>Jalecos exclusivos para estudantes de Medicina. Use o cupom <b>FACILITAPARAGUAI</b> e ganhe desconto.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CONTATO -->
+        <section class="sec bg-alt" id="contato">
+            <div class="wrap">
+                <div class="contact-box rv">
+                    <div class="center-head" style="margin-bottom: 2.5rem; max-width: none;">
+                        <span class="eyebrow">Fale com a Lara</span>
+                        <h2>Preencha para conversar no <span class="gt"><em>WhatsApp</em></span></h2>
+                    </div>
+
+                    <form id="waForm">
+                        <div class="form-group">
+                            <label for="wa-name">Seu nome</label>
+                            <input type="text" id="wa-name" class="form-control" placeholder="Ex: Maria Silva" autocomplete="name" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="wa-interest">Qual seu interesse?</label>
+                                <select id="wa-interest" class="form-control" required>
+                                    <option value="" disabled selected>Selecione...</option>
+                                    <option value="Guia de Medicina (E-book)">Guia de Medicina (E-book)</option>
+                                    <option value="Assessoria para Medicina">Assessoria para Medicina</option>
+                                    <option value="Assessoria para Migração">Assessoria para Migração</option>
+                                    <option value="Parcerias e Publicidade">Parcerias e Publicidade</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="wa-time">Em quanto tempo pretende começar? (opcional)</label>
+                                <select id="wa-time" class="form-control">
+                                    <option value="Prefiro não dizer">Prefiro não dizer</option>
+                                    <option value="Imediatamente (Próximo Semestre)">Imediatamente (Próximo Semestre)</option>
+                                    <option value="No próximo ano">No próximo ano</option>
+                                    <option value="Ainda estou pesquisando">Ainda estou pesquisando</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="wa-msg">Mensagem</label>
+                            <textarea id="wa-msg" class="form-control" placeholder="Ex: Tenho 25 anos, quero cursar Medicina na UCP e gostaria de saber por onde começar." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn block">
+                            <i class="whatsapp icon"></i> Enviar pelo WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="wrap">
+            <div class="logo">Facilita<span>Paraguai</span></div>
+            <p>Sua ponte segura para a Medicina no Paraguai.</p>
+
+            <div class="social-links">
+                <a href="https://www.instagram.com/facilitaparaguai" aria-label="Instagram" target="_blank" rel="noopener"><i class="instagram icon"></i></a>
+                <a href="https://youtube.com/@facilitaparaguai" aria-label="YouTube" target="_blank" rel="noopener"><i class="youtube icon"></i></a>
+                <a href="https://tiktok.com/@facilitaparaguai" aria-label="TikTok" target="_blank" rel="noopener"><i class="tiktok icon"></i></a>
+                <a href="https://wa.me/595982515460" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="whatsapp icon"></i></a>
+            </div>
+
+            <p class="copy">&copy; <span id="year"></span> Facilita Paraguai. Todos os direitos reservados. <br> Feito com <i class="heart icon" style="color: var(--pink-main);"></i> por <a href="https://www.instagram.com/vitormed_" target="_blank" rel="noopener">@vitormed_</a></p>
+        </div>
+    </footer>
+
+    <script>
+    (function () {
+        'use strict';
+
+        // ---------- Config ----------
+        var WHATSAPP_PHONE = '595982515460'; // número da Lara (o mesmo do rodapé)
+
+        // ---------- 1. Ano no rodapé ----------
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // ---------- 2. Navbar sólida ao rolar ----------
+        var nav = document.getElementById('nav');
+
+        // ---------- 3. Hero: vídeo sincronizado com o scroll ----------
+        var story = document.querySelector('.story');
+        var video = document.getElementById('v');
+        var beats = Array.prototype.slice.call(document.querySelectorAll('.beat'));
+        var bar = document.getElementById('bar');
+        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        var target = 0;     // progresso real do scroll (0 a 1)
+        var current = 0;    // progresso suavizado usado no vídeo
+        var rafId = null;
+        var storyTop = 0, storyScrollable = 1;
+        var lastSeek = -1;
+
+        function measure() {
+            storyTop = story.getBoundingClientRect().top + window.scrollY;
+            storyScrollable = Math.max(story.offsetHeight - window.innerHeight, 1);
+            readScroll();
+        }
+
+        function readScroll() {
+            var p = (window.scrollY - storyTop) / storyScrollable;
+            target = p < 0 ? 0 : p > 1 ? 1 : p;
+            if (!rafId) rafId = requestAnimationFrame(render);
+        }
+
+        function updateBeats() {
+            for (var i = 0; i < beats.length; i++) {
+                var a = parseFloat(beats[i].dataset.a);
+                var b = parseFloat(beats[i].dataset.b);
+                beats[i].classList.toggle('on', target >= a && target <= b);
+            }
+        }
+
+        function render() {
+            rafId = null;
+
+            // suaviza o movimento (menor = mais macio, maior = mais responsivo)
+            var diff = target - current;
+            current = Math.abs(diff) < 0.0004 ? target : current + diff * 0.14;
+
+            if (video.readyState >= 1 && video.duration && !video.seeking) {
+                var t = Math.min(video.duration * current, video.duration - 0.05);
+                // só faz seek se mudou pelo menos ~1 frame (evita seeks repetidos)
+                if (Math.abs(t - lastSeek) > 0.03) {
+                    video.currentTime = t;
+                    lastSeek = t;
+                }
+            }
+
+            if (bar) bar.style.transform = 'scaleX(' + current.toFixed(4) + ')';
+            updateBeats();
+
+            // continua animando enquanto não alcançou o alvo
+            if (current !== target) rafId = requestAnimationFrame(render);
+        }
+
+        // Reduz movimento: sem vídeo sincronizado, apenas textos
+        if (reduceMotion) {
+            video.style.display = 'none';
+        } else {
+            video.addEventListener('loadedmetadata', measure);
+            // iOS/Safari: "destrava" o vídeo no primeiro toque para permitir seek
+            var unlock = function () {
+                var p = video.play();
+                if (p && p.then) p.then(function () { video.pause(); }).catch(function () {});
+                window.removeEventListener('touchstart', unlock);
+                window.removeEventListener('click', unlock);
+                window.removeEventListener('scroll', unlock);
+            };
+            window.addEventListener('touchstart', unlock, { passive: true });
+            window.addEventListener('click', unlock);
+            window.addEventListener('scroll', unlock, { passive: true, once: true });
+        }
+
+        window.addEventListener('scroll', function () {
+            nav.classList.toggle('solid', window.scrollY > 50);
+            readScroll();
+        }, { passive: true });
+        window.addEventListener('resize', measure);
+        window.addEventListener('load', measure);
+        measure();
+
+        // ---------- 4. Reveal (IntersectionObserver) ----------
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+
+        // ---------- 5. Contadores ----------
+        var animated = false;
+        function animateCounters() {
+            document.querySelectorAll('.counter').forEach(function (el) {
+                var end = +el.getAttribute('data-target');
+                var duration = reduceMotion ? 0 : 1800;
+                var start = performance.now();
+                (function tick(now) {
+                    var k = duration ? Math.min((now - start) / duration, 1) : 1;
+                    var eased = 1 - Math.pow(1 - k, 3);
+                    el.textContent = Math.round(end * eased);
+                    if (k < 1) requestAnimationFrame(tick);
+                })(start);
+            });
+        }
+        var statsEl = document.getElementById('stats');
+        if (statsEl) {
+            new IntersectionObserver(function (entries, obs) {
+                if (entries[0].isIntersecting && !animated) {
+                    animated = true;
+                    animateCounters();
+                    obs.disconnect();
+                }
+            }, { threshold: 0.5 }).observe(statsEl);
+        }
+
+        // ---------- 6. Botões "Saiba mais" pré-selecionam o interesse ----------
+        document.querySelectorAll('[data-interest]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var sel = document.getElementById('wa-interest');
+                sel.value = btn.getAttribute('data-interest');
+            });
+        });
+
+        // ---------- 7. Envio para o WhatsApp ----------
+        document.getElementById('waForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            var name = document.getElementById('wa-name').value.trim();
+            var interest = document.getElementById('wa-interest').value;
+            var time = document.getElementById('wa-time').value;
+            var msg = document.getElementById('wa-msg').value.trim();
+
+            var text = 'Olá Lara! Me chamo *' + name + '*.\n\n' +
+                       '*Meu interesse:* ' + interest + '\n' +
+                       '*Previsão de início:* ' + time + '\n\n' +
+                       '*Mensagem:* ' + msg;
+
+            window.open('https://wa.me/' + WHATSAPP_PHONE + '?text=' + encodeURIComponent(text), '_blank', 'noopener');
+        });
+    })();
+    </script>
+</body>
+</html>

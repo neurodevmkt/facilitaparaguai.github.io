@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <!-- SEO & Otimização -->
+    <title>Guia de Medicina no Paraguai | Facilita Paraguai - Lara Ribas</title>
+    <meta name="description" content="Tudo o que você precisa saber sobre a UCP: mensalidades, matrícula, visto, moradia e custo de vida. O guia definitivo para estudar Medicina no Paraguai sem cair em ciladas.">
+    <meta name="keywords" content="Guia Medicina no Paraguai, E-book UCP, Estudar no Paraguai, Imigração Paraguai, Lara Ribas, Facilita Paraguai">
+    <meta name="author" content="Lara Ribas">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://www.facilitaparaguai.com.br/guia-de-medicina">
+
+    <!-- Open Graph (Redes Sociais) -->
+    <meta property="og:type" content="product">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Facilita Paraguai">
+    <meta property="og:title" content="O Guia Completo para estudar Medicina no Paraguai">
+    <meta property="og:description" content="Mensalidades, matrícula, visto, moradia, custo de vida e convalidação. Escrito por quem vive isso todos os dias.">
+    <meta property="og:url" content="https://www.facilitaparaguai.com.br/guia-de-medicina">
+    <meta property="og:image" content="lara_poster.jpg"> <!-- Altere para a capa do ebook -->
+
+    <!-- Fontes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Fomantic UI Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css">
+
+    <style>
+        /* ================= VARIÁVEIS E RESET (Mantido do original) ================= */
+        :root {
+            --bg: #ffffff;
+            --bg-alt: #fdfafb;
+            --bg-card: #ffffff;
+            --ink: #2b2d42;
+            --mute: #6c757d;
+            --black: #000000;
+            --line: #f1e3e8;
+            --pink-main: #e84393;
+            --pink-light: #fd79a8;
+            --pink-bg: #fff0f5;
+            --grad: linear-gradient(135deg, var(--pink-light), var(--pink-main));
+            --pad: clamp(20px, 5vw, 56px);
+            --font-title: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 { font-family: var(--font-title); color: var(--ink); font-weight: 600; }
+        em { font-style: italic; color: var(--pink-main); }
+        .gt { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .gt em { color: transparent; }
+        a { color: inherit; text-decoration: none; transition: .3s; }
+        p { color: var(--mute); font-size: 1rem; margin-bottom: 1rem; }
+
+        .wrap { max-width: 1160px; margin: 0 auto; padding: 0 var(--pad); }
+        .sec { padding: clamp(4.5rem, 11vw, 7rem) 0; }
+        .sec h2 { font-size: clamp(2.2rem, 5vw, 3.2rem); margin-bottom: 1rem; }
+
+        .eyebrow {
+            display: inline-block; font-size: .75rem; letter-spacing: .15em;
+            text-transform: uppercase; color: var(--pink-main);
+            font-weight: 700; margin-bottom: 1rem; font-family: var(--font-body);
+            background: var(--pink-bg); padding: .4rem 1rem; border-radius: 99px;
+        }
+
+        /* BOTÕES */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+            min-height: 52px; padding: 0 2rem; border-radius: 99px;
+            background: var(--grad); color: #fff; font-weight: 600; font-size: .95rem;
+            border: 0; cursor: pointer; transition: all .3s cubic-bezier(.2,.8,.2,1);
+            box-shadow: 0 8px 25px rgba(232, 67, 147, 0.25);
+            font-family: var(--font-body);
+            text-align: center;
+        }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(232, 67, 147, 0.4); color: #fff; }
+        .btn.ghost { background: transparent; color: var(--pink-main); border: 2px solid var(--pink-main); box-shadow: none; }
+        .btn.ghost:hover { background: var(--pink-main); color: #fff; }
+        .btn.block { width: 100%; font-size: 1.1rem; padding: 18px; }
+        .btn.green { background: #25D366; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.25); }
+        .btn.green:hover { box-shadow: 0 12px 35px rgba(37, 211, 102, 0.4); }
+        
+        .badge { align-self: flex-start; display: inline-flex; align-items: center; gap: .4rem; font-size: .75rem; background: var(--pink-main); color: #fff; padding: .4rem 1rem; border-radius: 99px; margin-bottom: 1rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; }
+        .badge.dark { background: var(--ink); }
+
+        /* NAV */
+        .nav {
+            position: fixed; inset: 0 0 auto 0; z-index: 50;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: calc(15px + env(safe-area-inset-top, 0px)) var(--pad) 15px;
+            transition: background .4s, box-shadow .4s;
+        }
+        .nav.solid { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .logo { font-family: var(--font-title); font-size: 1.4rem; font-weight: 700; color: var(--ink); }
+        .logo span { color: var(--pink-main); }
+        .nav ul { display: none; list-style: none; gap: 28px; font-size: .9rem; font-weight: 500; }
+        .nav ul a:hover { color: var(--pink-main); }
+        .nav .btn { min-height: 44px; padding: 0 1.2rem; font-size: .85rem; }
+
+        /* ================= NOVAS CLASSES PARA PÁGINA DE PRODUTO ================= */
+        
+        /* HERO ESTÁTICO DE CONVERSÃO */
+        .hero-static {
+            position: relative;
+            padding: calc(8rem + env(safe-area-inset-top, 0px)) 0 5rem;
+            background: linear-gradient(180deg, var(--pink-bg) 0%, var(--bg) 100%);
+            overflow: hidden;
+        }
+        .hero-static h1 { font-size: clamp(2.4rem, 6vw, 4rem); margin-bottom: 1rem; line-height: 1.1; color: var(--ink); }
+        .hero-static p { color: var(--mute); font-size: clamp(1rem, 2vw, 1.15rem); max-width: 50ch; margin-bottom: 2rem; }
+        .hero-tags { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
+        .hero-img-container { position: relative; text-align: center; }
+        /* Placeholder para capa do E-book */
+        .ebook-mockup { width: 100%; max-width: 400px; border-radius: 12px; box-shadow: 0 30px 60px rgba(232, 67, 147, 0.15); transform: perspective(800px) rotateY(-15deg); transition: .5s; }
+        .ebook-mockup:hover { transform: perspective(800px) rotateY(0deg); }
+
+        /* GRIDS & LAYOUTS */
+        .split { display: grid; gap: 4rem; align-items: center; }
+        .bg-alt { background-color: var(--bg-alt); }
+        .center-head { text-align: center; max-width: 700px; margin: 0 auto; }
+        
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 2rem; margin-top: 3rem; }
+        .card { background: var(--bg-card); padding: 2.5rem; border-radius: 24px; border: 1px solid var(--line); transition: .4s ease; display: flex; flex-direction: column; height: 100%; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(232, 67, 147, 0.08); border-color: var(--pink-light); }
+        .card-icon { width: 50px; height: 50px; border-radius: 12px; background: var(--pink-bg); color: var(--pink-main); display: grid; place-items: center; font-size: 1.5rem; margin-bottom: 1.2rem; }
+        .card h3 { font-size: 1.3rem; margin-bottom: .8rem; }
+        
+        /* LISTAS DE CHECK (O que tem no guia) */
+        .check-list { list-style: none; margin-top: 2rem; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        .check-list li { display: flex; gap: 1rem; align-items: flex-start; background: #fff; padding: 1.2rem; border-radius: 12px; border: 1px solid var(--line); font-size: .95rem; font-weight: 500; }
+        .check-list li i { color: var(--pink-main); font-size: 1.2rem; margin-top: 2px; }
+
+        /* LISTA DE DORES (Sem o guia) */
+        .pain-list { list-style: none; margin-top: 2rem; display: grid; gap: 1rem; }
+        .pain-list li { display: flex; gap: 1rem; align-items: center; background: #fff; padding: 1.2rem; border-radius: 12px; border: 1px solid #ffebee; font-size: .95rem; }
+        .pain-list li i { color: #d63031; font-size: 1.2rem; }
+
+        /* BOX DE OFERTA/CHECKOUT */
+        .offer-box {
+            background: #fff; padding: clamp(2rem, 5vw, 3.5rem); border-radius: 24px;
+            box-shadow: 0 30px 70px rgba(232, 67, 147, 0.12);
+            border: 2px solid var(--pink-main);
+            text-align: center; max-width: 600px; margin: 4rem auto 0; position: relative;
+        }
+        .offer-badge {
+            position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%);
+            background: var(--ink); color: #fff; padding: .5rem 1.5rem; border-radius: 99px;
+            font-weight: 700; font-size: .85rem; letter-spacing: .05em; text-transform: uppercase;
+        }
+        .price { margin: 1.5rem 0; }
+        .price s { color: var(--mute); font-size: 1.5rem; display: block; }
+        .price .current { font-size: 4rem; font-family: var(--font-title); font-weight: 700; color: var(--pink-main); line-height: 1; }
+        .price .installments { font-size: 1.1rem; color: var(--ink); font-weight: 500; margin-top: .5rem; display: block; }
+        .offer-features { list-style: none; text-align: left; margin: 2rem 0; padding-top: 2rem; border-top: 1px solid var(--line); }
+        .offer-features li { margin-bottom: .8rem; font-weight: 500; display: flex; align-items: center; gap: .8rem; }
+        .offer-features i { color: #2ecc71; }
+        
+        .secure-pay { display: flex; align-items: center; justify-content: center; gap: .5rem; font-size: .8rem; color: var(--mute); margin-top: 1.5rem; }
+        
+        /* FAQ ACCORDION */
+        .faq-wrap { max-width: 800px; margin: 3rem auto 0; }
+        details { background: #fff; border: 1px solid var(--line); border-radius: 16px; margin-bottom: 1rem; overflow: hidden; transition: .3s; }
+        details:hover { border-color: var(--pink-light); box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
+        summary { padding: 1.5rem; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; font-size: 1.05rem; color: var(--ink); }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '\f067'; font-family: 'Icons'; font-weight: 900; color: var(--pink-main); transition: transform .3s; }
+        details[open] summary::after { transform: rotate(45deg); }
+        details p { padding: 0 1.5rem 1.5rem; margin: 0; color: var(--mute); font-size: .95rem; line-height: 1.7; }
+
+        /* FOOTER */
+        footer { background: var(--ink); color: #fff; padding: 4rem 0 calc(2rem + env(safe-area-inset-bottom, 0px)); text-align: center; }
+        footer .logo { color: #fff; font-size: 1.8rem; margin-bottom: 1rem; }
+        footer .logo span { color: var(--pink-light); }
+        .social-links { display: flex; justify-content: center; gap: 1rem; margin: 2rem 0; }
+        .social-links a { width: 45px; height: 45px; border-radius: 50%; background: rgba(255,255,255,0.1); display: grid; place-items: center; font-size: 1.2rem; color: #fff; }
+        .social-links a:hover { background: var(--pink-main); transform: translateY(-3px); }
+        footer p { color: rgba(255,255,255,0.5); font-size: .85rem; }
+        footer p.copy { margin-top: 2rem; }
+
+        /* ANIMAÇÕES (REVEAL) */
+        .rv { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s ease; }
+        .rv.in { opacity: 1; transform: translateY(0); }
+
+        @media (min-width: 768px) {
+            .nav ul { display: flex; }
+            .nav .btn { min-height: 52px; padding: 0 2rem; font-size: .95rem; }
+            .split { grid-template-columns: 1.2fr 1fr; }
+            .hero-static { padding: calc(10rem + env(safe-area-inset-top, 0px)) 0 8rem; }
+        }
+        @media (max-width: 480px) {
+            .nav .btn span { display: none; }
+            .hero-actions { flex-direction: column; width: 100%; }
+            .hero-actions .btn { width: 100%; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .rv { opacity: 1; transform: none; transition: none; }
+            .ebook-mockup { transform: none; transition: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="nav" id="nav">
+        <a href="index.html" class="logo">Facilita<span>Paraguai</span></a>
+        <ul>
+            <li><a href="#beneficios">Para quem é</a></li>
+            <li><a href="#conteudo">O que tem no guia</a></li>
+            <li><a href="#faq">Dúvidas</a></li>
+        </ul>
+        <a href="index.html" class="btn ghost"><i class="arrow left icon"></i> Voltar ao site</a>
+    </header>
+
+    <main>
+        <!-- 1. HERO ESTÁTICO (Foco em conversão) -->
+        <section class="hero-static" id="topo">
+            <div class="wrap split">
+                <div class="rv">
+                    <div class="hero-tags">
+                        <span class="badge dark"><i class="file pdf outline icon"></i> PDF Digital</span>
+                        <span class="badge dark"><i class="file alternate outline icon"></i> 32 Páginas</span>
+                        <span class="badge dark"><i class="bolt icon"></i> Acesso Imediato</span>
+                    </div>
+                    
+                    <span class="eyebrow">Guia Oficial Facilita Paraguai</span>
+                    <h1>O guia completo para estudar Medicina no Paraguai — <span class="gt"><em>sem cair em ciladas</em></span></h1>
+                    
+                    <p>Tudo o que você precisa saber sobre a UCP (Universidad Central del Paraguay): mensalidades, matrícula, visto, moradia, custo de vida e convalidação. Escrito por quem vive isso todos os dias.</p>
+                    
+                    <div class="hero-actions">
+                        <!-- Substitua o '#' pelo link do checkout da Kiwify -->
+                        <a href="#oferta" class="btn"><i class="shopping cart icon"></i> Quero meu guia agora — R$ 27</a>
+                        <a href="https://wa.me/595982515460?text=Olá%20Lara,%20tenho%20uma%20dúvida%20sobre%20o%20Guia%20de%20Medicina!" target="_blank" class="btn ghost"><i class="whatsapp icon"></i> Tirar dúvida antes de comprar</a>
+                    </div>
+                </div>
+
+                <div class="hero-img-container rv">
+                    <!-- ADICIONE AQUI A IMAGEM DO SEU MOCKUP DO E-BOOK -->
+                    <!-- Substitua 'mockup.png' pelo arquivo real -->
+                    <img src="https://via.placeholder.com/400x550/e84393/ffffff?text=Capa+do+Guia+(Substituir)" alt="Guia Completo Medicina no Paraguai" class="ebook-mockup" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. PARA QUEM É (Benefícios) -->
+        <section class="sec bg-alt" id="beneficios">
+            <div class="wrap">
+                <div class="rv center-head">
+                    <span class="eyebrow">Por que este guia?</span>
+                    <h2>Esse guia é feito <span class="gt"><em>para você que...</em></span></h2>
+                </div>
+
+                <div class="cards-grid rv">
+                    <div class="card">
+                        <div class="card-icon"><i class="user graduate icon"></i></div>
+                        <h3>Quer cursar Medicina sem vestibular</h3>
+                        <p>Ingresso direto na UCP, sem prova tradicional, com um processo de matrícula simplificado que explicamos passo a passo.</p>
+                    </div>
+
+                    <div class="card featured">
+                        <div class="card-icon"><i class="money bill alternate outline icon"></i></div>
+                        <h3>Busca mensalidade até 10x mais barata</h3>
+                        <p>Ensino de qualidade reconhecido pelo CONES e MEC paraguaio, a uma fração do custo das universidades do Brasil.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon"><i class="exchange icon"></i></div>
+                        <h3>Quer transferir matérias</h3>
+                        <p>Aproveitamento de créditos da sua faculdade atual para entrar direto em semestres avançados, com orientações sobre a Apostila de Haia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. O QUE TEM DENTRO (Checklist de Features) -->
+        <section class="sec" id="conteudo">
+            <div class="wrap">
+                <div class="rv center-head">
+                    <span class="eyebrow">Sumário Completo</span>
+                    <h2>O que você vai encontrar <span class="gt"><em>dentro</em></span></h2>
+                    <p>Cada página foi pensada para responder uma pergunta real que recebo todos os dias no Instagram e WhatsApp.</p>
+                </div>
+
+                <ul class="check-list rv">
+                    <li><i class="check circle icon"></i> Tudo sobre a UCP: reconhecimento (CONES e MEC) e diferenciais</li>
+                    <li><i class="check circle icon"></i> Plano de estudos completo dos 12 semestres (11.101 horas)</li>
+                    <li><i class="check circle icon"></i> Sedes detalhadas: Ciudad del Este x Pedro Juan Caballero</li>
+                    <li><i class="check circle icon"></i> Uniformes exigidos por fase do curso</li>
+                    <li><i class="check circle icon"></i> Sistema de provas e como funciona o internato (Brasil e Paraguai)</li>
+                    <li><i class="check circle icon"></i> Tabela de mensalidades + economia real comparada ao Brasil</li>
+                    <li><i class="check circle icon"></i> Moradia: os melhores bairros para morar durante o curso</li>
+                    <li><i class="check circle icon"></i> Custo de vida real e atualizado no Paraguai</li>
+                    <li><i class="check circle icon"></i> Ônibus universitário gratuito entre sedes</li>
+                    <li><i class="check circle icon"></i> Passo a passo exato da matrícula</li>
+                    <li><i class="check circle icon"></i> Regularização acadêmica (Apostila de Haia)</li>
+                    <li><i class="check circle icon"></i> Documentação para o Visto de estudante</li>
+                    <li><i class="check circle icon"></i> Creche da faculdade (filhos de 1 a 7 anos)</li>
+                    <li><i class="check circle icon"></i> Convalidação/transferência de matérias de outra faculdade</li>
+                    <li><i class="check circle icon"></i> 8+ perguntas frequentes detalhadas</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 4. DORES (Sem o guia é assim...) -->
+        <section class="sec bg-alt">
+            <div class="wrap split" style="grid-template-columns: 1fr 1fr; align-items: start;">
+                <div class="rv">
+                    <span class="eyebrow" style="color: #d63031; background: #ffebee;">O Custo de não saber</span>
+                    <h2>Sem o guia, é assim que <span class="gt"><em>costuma ser…</em></span></h2>
+                    <p>Toda semana converso com gente que tentou se virar sozinha — e quase desistiu do sonho por causa de uma dessas armadilhas. O guia foi escrito justamente pra você não passar por nada disso.</p>
+                </div>
+
+                <div class="rv">
+                    <ul class="pain-list">
+                        <li><i class="times circle icon"></i> Cair em ciladas de "consultorias" que cobram milhares de reais por informação que devia ser pública.</li>
+                        <li><i class="times circle icon"></i> Perder meses pesquisando em grupos de Facebook, vídeos desencontrados e prints de WhatsApp.</li>
+                        <li><i class="times circle icon"></i> Gastar à toa com viagens de reconhecimento sem saber qual sede combina com você.</li>
+                        <li><i class="times circle icon"></i> Chegar no Paraguai e descobrir que faltam documentos da Apostila de Haia — e ter que voltar pro Brasil.</li>
+                        <li><i class="times circle icon"></i> Alugar imóvel em bairro errado, longe da faculdade, estourando o orçamento.</li>
+                        <li><i class="times circle icon"></i> Travar na convalidação por não saber quais matérias podem ser aproveitadas.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. OFERTA & CHECKOUT -->
+        <section class="sec" id="oferta">
+            <div class="wrap">
+                <div class="offer-box rv">
+                    <span class="offer-badge">Oferta Especial de Lançamento</span>
+                    
+                    <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Tudo o que você precisa saber sobre Medicina na UCP, num só PDF</h2>
+                    
+                    <div class="price">
+                        <s>De R$ 67,00 por apenas</s>
+                        <span class="current">R$ 27</span>
+                        <span class="installments">à vista ou em até 3x de R$ 9,67 no cartão</span>
+                    </div>
+
+                    <ul class="offer-features">
+                        <li><i class="check icon"></i> 32 páginas de conteúdo direto ao ponto em PDF</li>
+                        <li><i class="check icon"></i> Acesso imediato no seu e-mail após a compra</li>
+                        <li><i class="check icon"></i> <strong>Bônus 1:</strong> Acesso ao grupo VIP no WhatsApp da Facilita</li>
+                        <li><i class="check icon"></i> <strong>Bônus 2:</strong> Atualizações gratuitas sempre que houver mudança nas regras</li>
+                        <li><i class="check icon"></i> <strong>Bônus 3:</strong> Lista de contatos úteis (cartórios, despachantes, moradia)</li>
+                        <li><i class="check icon"></i> <strong>Garantia incondicional de 7 dias</strong></li>
+                    </ul>
+
+                    <!-- SUBSTITUIR # PELO LINK DA KIWIFY -->
+                    <a href="#" class="btn block"><i class="shopping cart icon"></i> Comprar Agora por R$ 27</a>
+                    
+                    <div class="secure-pay">
+                        <i class="lock icon"></i> Pagamento 100% seguro via Kiwify · Pix, cartão ou boleto
+                    </div>
+                </div>
+
+                <div class="rv" style="text-align: center; margin-top: 3rem;">
+                    <i class="shield alternate icon" style="font-size: 3rem; color: var(--pink-main); margin-bottom: 1rem; display: block;"></i>
+                    <h3>Risco Zero. Garantia de 7 Dias.</h3>
+                    <p style="max-width: 600px; margin: 0 auto;">Se nos primeiros 7 dias você sentir que o guia não é para você, basta me enviar uma mensagem e devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. FAQ -->
+        <section class="sec bg-alt" id="faq">
+            <div class="wrap">
+                <div class="rv center-head">
+                    <span class="eyebrow">Dúvidas Comuns</span>
+                    <h2>Perguntas <span class="gt"><em>Frequentes</em></span></h2>
+                </div>
+
+                <div class="faq-wrap rv">
+                    <details>
+                        <summary>Como recebo o guia depois da compra?</summary>
+                        <p>O envio é automático! Assim que o seu pagamento for confirmado pela plataforma (via Pix ou Cartão de Crédito é na hora), você receberá um e-mail com o link para baixar o PDF completo e o link de acesso ao grupo VIP.</p>
+                    </details>
+
+                    <details>
+                        <summary>Serve se eu ainda não decidi qual cidade?</summary>
+                        <p>Com certeza! No guia eu faço um comparativo direto entre as sedes de Ciudad del Este (CDE) e Pedro Juan Caballero (PJC), para te ajudar a escolher a que melhor se adapta ao seu estilo de vida e orçamento.</p>
+                    </details>
+
+                    <details>
+                        <summary>Já estudo Medicina no Brasil. O guia me serve?</summary>
+                        <p>Sim. Temos um capítulo dedicado exclusivamente à convalidação e transferência de matérias de outras faculdades, com os passos documentais necessários (Apostila de Haia) para você aproveitar seus créditos acadêmicos e ingressar em semestres mais avançados.</p>
+                    </details>
+
+                    <details>
+                        <summary>Tem suporte se eu tiver dúvidas?</summary>
+                        <p>Sim! Ao garantir o guia, você ganha acesso ao Grupo VIP no WhatsApp exclusivo para alunos do e-book. Lá, eu mesma ajudo a tirar dúvidas pontuais e nossa comunidade se apoia no processo de mudança.</p>
+                    </details>
+
+                    <details>
+                        <summary>E se eu não gostar do material?</summary>
+                        <p>Você tem 7 dias de garantia incondicional. Se você ler o guia e achar que a informação não te ajudou, é só mandar um e-mail que o sistema reembolsa todo o valor. Risco zero para você.</p>
+                    </details>
+                </div>
+                
+                <div class="rv" style="text-align: center; margin-top: 4rem;">
+                    <h3>Pronto para começar com o pé direito?</h3>
+                    <p style="max-width: 600px; margin: 0 auto 1.5rem;">Por menos do que uma pizza, você economiza meses de pesquisa, evita erros caros e começa a planejar sua faculdade hoje.</p>
+                    <a href="#oferta" class="btn">Comprar agora por R$ 27</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (Mantido do original) -->
+    <footer>
+        <div class="wrap">
+            <div class="logo">Facilita<span>Paraguai</span></div>
+            <p>Sua ponte segura para a Medicina no Paraguai.</p>
+
+            <div class="social-links">
+                <a href="https://www.instagram.com/facilitaparaguai" aria-label="Instagram" target="_blank" rel="noopener"><i class="instagram icon"></i></a>
+                <a href="https://youtube.com/@facilitaparaguai" aria-label="YouTube" target="_blank" rel="noopener"><i class="youtube icon"></i></a>
+                <a href="https://tiktok.com/@facilitaparaguai" aria-label="TikTok" target="_blank" rel="noopener"><i class="tiktok icon"></i></a>
+                <a href="https://wa.me/595982515460" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="whatsapp icon"></i></a>
+            </div>
+
+            <p class="copy">&copy; <span id="year"></span> Facilita Paraguai. Todos os direitos reservados. <br> Feito com <i class="heart icon" style="color: var(--pink-main);"></i> por <a href="https://www.instagram.com/vitormed_" target="_blank" rel="noopener">@vitormed_</a></p>
+        </div>
+    </footer>
+
+    <script>
+    (function () {
+        'use strict';
+
+        // 1. Ano no rodapé
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // 2. Navbar sólida ao rolar
+        var nav = document.getElementById('nav');
+        window.addEventListener('scroll', function () {
+            nav.classList.toggle('solid', window.scrollY > 50);
+        }, { passive: true });
+
+        // 3. Reveal (IntersectionObserver)
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+
+        // 4. Fechar outras abas do FAQ ao abrir uma (opcional, para melhor UX)
+        const details = document.querySelectorAll('details');
+        details.forEach(targetDetail => {
+            targetDetail.addEventListener('click', () => {
+                details.forEach(detail => {
+                    if (detail !== targetDetail) {
+                        detail.removeAttribute('open');
+                    }
+                });
+            });
+        });
+
+    })();
+    </script>
+</body>
+</html>
