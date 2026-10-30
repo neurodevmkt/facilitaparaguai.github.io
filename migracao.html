@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <!-- SEO & Otimização -->
+    <title>Assessoria para Migração | Facilita Paraguai - Lara Ribas</title>
+    <meta name="description" content="Descubra por que o Paraguai é o destino ideal. Qualidade de vida, economia e oportunidades. Assessoria completa para sua mudança.">
+    <meta name="keywords" content="Migração Paraguai, Morar no Paraguai, Assessoria Migratória, Imigração, Custo de Vida Paraguai, Lara Ribas">
+    <meta name="author" content="Lara Ribas">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://www.facilitaparaguai.com.br/assessoria-migracao">
+
+    <!-- Open Graph (Redes Sociais) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Facilita Paraguai">
+    <meta property="og:title" content="Migração para o Paraguai - Assessoria Especializada">
+    <meta property="og:description" content="Qualidade de vida, economia e impostos reduzidos. Simplificamos sua mudança de país do início ao fim.">
+    <meta property="og:url" content="https://www.facilitaparaguai.com.br/assessoria-migracao">
+    <meta property="og:image" content="lara_poster.jpg">
+
+    <!-- Fontes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Fomantic UI Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css">
+
+    <style>
+        /* ================= VARIÁVEIS E RESET ================= */
+        :root {
+            --bg: #ffffff;
+            --bg-alt: #fdfafb;
+            --bg-card: #ffffff;
+            --ink: #2b2d42;
+            --mute: #6c757d;
+            --black: #000000;
+            --line: #f1e3e8;
+            --pink-main: #e84393;
+            --pink-light: #fd79a8;
+            --pink-bg: #fff0f5;
+            --grad: linear-gradient(135deg, var(--pink-light), var(--pink-main));
+            --pad: clamp(20px, 5vw, 56px);
+            --font-title: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        body { font-family: var(--font-body); background: var(--bg); color: var(--ink); line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+        h1, h2, h3, h4 { font-family: var(--font-title); color: var(--ink); font-weight: 600; }
+        em { font-style: italic; color: var(--pink-main); }
+        .gt { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .gt em { color: transparent; }
+        a { color: inherit; text-decoration: none; transition: .3s; }
+        p { color: var(--mute); font-size: 1rem; margin-bottom: 1rem; }
+
+        .wrap { max-width: 1160px; margin: 0 auto; padding: 0 var(--pad); }
+        .sec { padding: clamp(4.5rem, 11vw, 7rem) 0; }
+        .sec h2 { font-size: clamp(2.2rem, 5vw, 3.2rem); margin-bottom: 1rem; }
+
+        .eyebrow { display: inline-block; font-size: .75rem; letter-spacing: .15em; text-transform: uppercase; color: var(--pink-main); font-weight: 700; margin-bottom: 1rem; font-family: var(--font-body); background: var(--pink-bg); padding: .4rem 1rem; border-radius: 99px; }
+
+        /* BOTÕES */
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: .6rem; min-height: 52px; padding: 0 2rem; border-radius: 99px; background: var(--grad); color: #fff; font-weight: 600; font-size: .95rem; border: 0; cursor: pointer; transition: all .3s cubic-bezier(.2,.8,.2,1); box-shadow: 0 8px 25px rgba(232, 67, 147, 0.25); font-family: var(--font-body); text-align: center; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(232, 67, 147, 0.4); color: #fff; }
+        .btn.ghost { background: transparent; color: var(--pink-main); border: 2px solid var(--pink-main); box-shadow: none; }
+        .btn.ghost:hover { background: var(--pink-main); color: #fff; }
+
+        /* NAV */
+        .nav { position: fixed; inset: 0 0 auto 0; z-index: 50; display: flex; justify-content: space-between; align-items: center; padding: calc(15px + env(safe-area-inset-top, 0px)) var(--pad) 15px; transition: background .4s, box-shadow .4s; }
+        .nav.solid { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .logo { font-family: var(--font-title); font-size: 1.4rem; font-weight: 700; color: var(--ink); }
+        .logo span { color: var(--pink-main); }
+        .nav ul { display: none; list-style: none; gap: 28px; font-size: .9rem; font-weight: 500; }
+        .nav ul a:hover { color: var(--pink-main); }
+        .nav .btn { min-height: 44px; padding: 0 1.2rem; font-size: .85rem; }
+
+        /* HERO ESTÁTICO DE CONVERSÃO */
+        .hero-static { position: relative; padding: calc(8rem + env(safe-area-inset-top, 0px)) 0 5rem; background: linear-gradient(180deg, var(--pink-bg) 0%, var(--bg) 100%); overflow: hidden; text-align: center; }
+        .hero-static h1 { font-size: clamp(2.4rem, 6vw, 4rem); margin-bottom: 1.5rem; line-height: 1.1; color: var(--ink); max-width: 900px; margin-inline: auto; }
+        .hero-static p { color: var(--mute); font-size: clamp(1rem, 2vw, 1.15rem); max-width: 700px; margin: 0 auto 2.5rem; }
+        .hero-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; }
+
+        /* GRIDS & LAYOUTS */
+        .split { display: grid; gap: 4rem; align-items: center; }
+        .bg-alt { background-color: var(--bg-alt); }
+        .center-head { text-align: center; max-width: 700px; margin: 0 auto; }
+        
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 2rem; margin-top: 3rem; }
+        .card { background: var(--bg-card); padding: 2.5rem; border-radius: 24px; border: 1px solid var(--line); transition: .4s ease; display: flex; flex-direction: column; height: 100%; box-shadow: 0 5px 20px rgba(0,0,0,0.02); }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(232, 67, 147, 0.08); border-color: var(--pink-light); }
+        .card-icon { width: 50px; height: 50px; border-radius: 12px; background: var(--pink-bg); color: var(--pink-main); display: grid; place-items: center; font-size: 1.5rem; margin-bottom: 1.2rem; }
+        .card h3 { font-size: 1.3rem; margin-bottom: .8rem; }
+
+        /* TABELA COMPARATIVA */
+        .table-responsive { overflow-x: auto; margin-top: 3rem; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.04); border: 1px solid var(--line); }
+        .compare-table { width: 100%; border-collapse: collapse; background: #fff; text-align: left; white-space: normal; min-width: 600px; }
+        .compare-table th, .compare-table td { padding: 1.5rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+        .compare-table th { background: var(--pink-bg); font-family: var(--font-title); font-size: 1.2rem; color: var(--ink); }
+        .compare-table th:first-child { width: 25%; }
+        .compare-table tbody tr:hover { background: var(--bg-alt); }
+        .compare-table tbody tr:last-child td { border-bottom: none; }
+        .compare-table td:nth-child(2) { border-right: 1px solid var(--line); background: rgba(253, 121, 168, 0.03); }
+        .compare-table .highlight { color: #2ecc71; font-weight: 600; display: inline-flex; align-items: center; gap: .4rem; }
+        .compare-table .highlight-red { color: #e74c3c; font-weight: 600; }
+
+        /* ================= DEPOIMENTOS (LOOP INFINITO) ================= */
+        .marquee-wrapper {
+            display: flex; overflow: hidden; user-select: none; gap: 2rem; padding: 2rem 0; margin-top: 3rem;
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+        .marquee-track {
+            display: flex; flex-shrink: 0; gap: 2rem; min-width: 100%;
+            animation: scrollMarquee 35s linear infinite;
+        }
+        .marquee-wrapper:hover .marquee-track { animation-play-state: paused; }
+        @keyframes scrollMarquee { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-100% - 2rem)); } }
+        
+        .test-card {
+            background: var(--bg-card); border: 1px solid var(--line); border-radius: 16px; padding: 2rem; width: 350px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03); display: flex; flex-direction: column; gap: 1.2rem; transition: .4s ease;
+        }
+        .test-card:hover { border-color: var(--pink-light); transform: translateY(-5px); }
+        .test-stars { color: #f1c40f; font-size: 1rem; letter-spacing: 2px; }
+        .test-text { font-size: .95rem; color: var(--mute); font-style: italic; line-height: 1.6; flex-grow: 1; }
+        .test-author { display: flex; align-items: center; gap: 1rem; margin-top: auto; }
+        .test-avatar {
+            width: 45px; height: 45px; border-radius: 50%; background: var(--pink-bg); color: var(--pink-main);
+            display: grid; place-items: center; font-weight: 700; font-size: 1.2rem; font-family: var(--font-title);
+        }
+        .test-name { font-weight: 600; color: var(--ink); font-size: .95rem; margin-bottom: .2rem; }
+        .test-role { font-size: .8rem; color: var(--mute); }
+
+        /* FAQ ACCORDION */
+        .faq-wrap { max-width: 800px; margin: 3rem auto 0; }
+        details { background: #fff; border: 1px solid var(--line); border-radius: 16px; margin-bottom: 1rem; overflow: hidden; transition: .3s; }
+        details:hover { border-color: var(--pink-light); box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
+        summary { padding: 1.5rem; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; font-size: 1.05rem; color: var(--ink); }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '\f067'; font-family: 'Icons'; font-weight: 900; color: var(--pink-main); transition: transform .3s; }
+        details[open] summary::after { transform: rotate(45deg); }
+        details p { padding: 0 1.5rem 1.5rem; margin: 0; color: var(--mute); font-size: .95rem; line-height: 1.7; }
+
+        /* FOOTER CTA */
+        .cta-footer { background: var(--grad); padding: 5rem 0; text-align: center; color: #fff; margin-top: 4rem; }
+        .cta-footer h2 { color: #fff; margin-bottom: 1rem; }
+        .cta-footer p { color: rgba(255,255,255,0.9); font-size: 1.1rem; max-width: 600px; margin: 0 auto 2rem; }
+        .cta-footer .btn { background: #fff; color: var(--pink-main); box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+        .cta-footer .btn:hover { background: var(--ink); color: #fff; }
+
+        /* FOOTER */
+        footer { background: var(--ink); color: #fff; padding: 4rem 0 calc(2rem + env(safe-area-inset-bottom, 0px)); text-align: center; }
+        footer .logo { color: #fff; font-size: 1.8rem; margin-bottom: 1rem; }
+        footer .logo span { color: var(--pink-light); }
+        .social-links { display: flex; justify-content: center; gap: 1rem; margin: 2rem 0; }
+        .social-links a { width: 45px; height: 45px; border-radius: 50%; background: rgba(255,255,255,0.1); display: grid; place-items: center; font-size: 1.2rem; color: #fff; }
+        .social-links a:hover { background: var(--pink-main); transform: translateY(-3px); }
+        footer p { color: rgba(255,255,255,0.5); font-size: .85rem; }
+        footer p.copy { margin-top: 2rem; }
+
+        /* ANIMAÇÕES (REVEAL) */
+        .rv { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s ease; }
+        .rv.in { opacity: 1; transform: translateY(0); }
+
+        @media (min-width: 768px) {
+            .nav ul { display: flex; }
+            .nav .btn { min-height: 52px; padding: 0 2rem; font-size: .95rem; }
+            .hero-static { padding: calc(10rem + env(safe-area-inset-top, 0px)) 0 8rem; }
+        }
+        @media (max-width: 480px) {
+            .nav .btn span { display: none; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .rv { opacity: 1; transform: none; transition: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="nav" id="nav">
+        <a href="index.html" class="logo">Facilita<span>Paraguai</span></a>
+        <ul>
+            <li><a href="#comparativo">Comparativo</a></li>
+            <li><a href="#servicos">O que inclui</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#faq">Dúvidas</a></li>
+        </ul>
+        <a href="index.html" class="btn ghost"><i class="arrow left icon"></i> Voltar</a>
+    </header>
+
+    <main>
+        <!-- 1. HERO -->
+        <section class="hero-static" id="topo">
+            <div class="wrap rv">
+                <span class="eyebrow">Migração para o Paraguai</span>
+                <h1>O destino ideal para quem busca <span class="gt"><em>qualidade de vida e economia</em></span></h1>
+                <p>Descubra por que o Paraguai oferece as melhores oportunidades financeiras, impostos justos e segurança para você e sua família, com a nossa assessoria completa cuidando de toda a burocracia.</p>
+                <div class="hero-actions">
+                    <a href="#comparativo" class="btn ghost">Ver Comparativo</a>
+                    <a href="https://wa.me/595982515460?text=Olá%20Lara,%20quero%20saber%20mais%20sobre%20a%20Assessoria%20de%20Migração!" target="_blank" class="btn"><i class="whatsapp icon"></i> Quero a Assessoria de Migração</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. TABELA COMPARATIVA -->
+        <section class="sec" id="comparativo">
+            <div class="wrap">
+                <div class="rv center-head">
+                    <span class="eyebrow">Por que mudar?</span>
+                    <h2>Paraguai <span class="gt"><em>vs</em></span> Brasil</h2>
+                    <p>Compare os custos, impostos e estilo de vida entre os dois países e entenda a vantagem econômica de atravessar a fronteira.</p>
+                </div>
+
+                <div class="table-responsive rv">
+                    <table class="compare-table">
+                        <thead>
+                            <tr>
+                                <th>Categoria</th>
+                                <th>🇵🇾 Paraguai</th>
+                                <th>🇧🇷 Brasil</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Impostos</strong></td>
+                                <td><span class="highlight"><i class="check circle icon"></i> IVA de 10%</span> — um dos menores da América Latina</td>
+                                <td><span class="highlight-red">Carga tributária de ~33%</span> do PIB</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Moradia</strong></td>
+                                <td><span class="highlight"><i class="home icon"></i> Aluguel a partir de US$ 200/mês</span> em cidades fronteiriças</td>
+                                <td>Aluguel médio de R$ 3.500+ em grandes capitais</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Alimentação</strong></td>
+                                <td>Refeição completa por ~US$ 3–5, <span class="highlight">supermercado até 50% mais barato</span></td>
+                                <td>Refeição média de R$ 30–50, supermercado com preços elevados</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Acesso a Bens (Tecnologia)</strong></td>
+                                <td>
+                                    • iPhone 16 Pro Max: <strong>R$ 7.506</strong><br>
+                                    • MacBook: <strong>R$ 4.628</strong><br>
+                                    • PS5: <strong>R$ 2.248</strong>
+                                </td>
+                                <td>
+                                    • iPhone 16 Pro Max: R$ 11.249<br>
+                                    • MacBook: R$ 10.199<br>
+                                    • PS5: R$ 3.900
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Empresas & Negócios</strong></td>
+                                <td><span class="highlight"><i class="chart line icon"></i> Lei de Maquila</span> com tributação de apenas 1%, grandes incentivos</td>
+                                <td>Carga tributária empresarial entre 30–40% do faturamento</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Crescimento Econômico</strong></td>
+                                <td>PIB em crescimento acelerado, economia estável</td>
+                                <td>Crescimento lento com instabilidade recorrente</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Burocracia</strong></td>
+                                <td>Processos simplificados para residência e abertura de negócios</td>
+                                <td>Burocracia extensa e complexa</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. O QUE ESTÁ INCLUSO -->
+        <section class="sec bg-alt" id="servicos">
+            <div class="wrap">
+                <div class="rv center-head">
+                    <span class="eyebrow">Assessoria Completa</span>
+                    <h2>O que está <span class="gt"><em>incluso</em></span> no serviço?</h2>
+                    <p>Cuidamos de cada etapa para que a sua mudança seja tranquila, legalizada e totalmente planejada.</p>
+                </div>
+
+                <div class="cards-grid rv">
+                    <div class="card">
+                        <div class="card-icon"><i class="passport icon"></i></div>
+                        <h3>Assessoria Migratória</h3>
+                        <p>Regularização documental sem burocracias. Emitimos sua Cédula Paraguaia, Carnê de Imigração e garantimos sua residência legal no país.</p>
+                    </div>
+
+                    <div class="card featured">
+                        <div class="card-icon"><i class="building outline icon"></i></div>
+                        <h3>Consultoria Imobiliária</h3>
+                        <p>Ajudamos na localização do imóvel ideal para sua rotina, garantindo bons bairros, proximidade de pontos de interesse e contratos seguros.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon"><i class="map signs icon"></i></div>
+                        <h3>Mentoria de Adaptação</h3>
+                        <p>Dicas exclusivas sobre a vida na fronteira, câmbio, compras e cultura para que você se sinta em casa desde o primeiro dia no Paraguai.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. DEPOIMENTOS (LOOP INFINITO) -->
+        <section class="sec" id="depoimentos" style="overflow-x: hidden;">
+            <div class="wrap">
+                <div class="rv center-head">
+                    <span class="eyebrow">Quem já mudou</span>
+                    <h2>Veja quem confiou na <span class="gt"><em>nossa Assessoria</em></span></h2>
+                </div>
+            </div>
+
+            <!-- O wrapper lida com o overflow e a máscara de gradiente -->
+            <div class="marquee-wrapper rv">
+                <!-- GRUPO 1: Track principal -->
+                <div class="marquee-track">
+                    <div class="test-card">
+                        <div class="test-stars"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                        <p class="test-text">"Tentar tirar a Cédula Paraguaia sozinho parecia um pesadelo. A assessoria da Lara resolveu tudo em tempo recorde e sem dor de cabeça. Hoje moro legalmente em CDE."</p>
+                        <div class="test-author">
+                            <div class="test-avatar">P</div>
+                            <div>
+                                <div class="test-name">Paulo Mendes</div>
+                                <div class="test-role">Empreendedor no Paraguai</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-card">
+                        <div class="test-stars"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                        <p class="test-text">"O serviço de consultoria imobiliária foi essencial. Me indicaram um apartamento excelente, perto do centro, e me ajudaram a entender o contrato de aluguel local."</p>
+                        <div class="test-author">
+                            <div class="test-avatar">F</div>
+                            <div>
+                                <div class="test-name">Fernanda Costa</div>
+                                <div class="test-role">Moradora de Ciudad del Este</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-card">
+                        <div class="test-stars"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                        <p class="test-text">"A mentoria de adaptação salvou minha vida financeira nos primeiros meses. Dicas de onde fazer câmbio, quais mercados ir e como funciona a rotina na fronteira."</p>
+                        <div class="test-author">
+                            <div class="test-avatar">T</div>
+                            <div>
+                                <div class="test-name">Thiago Alves</div>
+                                <div class="test-role">Trabalha Remoto do PY</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-card">
+                        <div class="test-stars"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                        <p class="test-text">"Mudamos em família e o processo migratório que parecia complexo fluiu muito bem graças ao trabalho minucioso da equipe. Super recomendo!"</p>
+                        <div class="test-author">
+                            <div class="test-avatar">B</div>
+                            <div>
+                                <div class="test-name">Bruna e Marcos</div>
+                                <div class="test-role">Família Expatriada</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GRUPO 2: Clone EXATO do Grupo 1 (Necessário para o loop perfeito) -->
+                <div class="marquee-track" aria-hidden="true">
+                    <div class="test-card">
+                        <div class="test-stars"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                        <p class="test-text">"Tentar tirar a Cédula Paraguaia sozinho parecia um pesadelo. A assessoria da Lara resolveu tudo em tempo recorde e sem dor de cabeça. Hoje moro legalmente em CDE."</p>
+                        <div class="test-author">
+                            <div class="test-avatar">P</div>
+                            <div>
+                                <div class="test-name">Paulo Mendes</div>
+                                <div class="test-role">Empreendedor no Paraguai</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-card">
+                        <div class="test-stars"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                        <p class="test-text">"O serviço de consultoria imobiliária foi essencial. Me indicaram um apartamento excelente, perto do centro, e me ajudaram a entender o contrato de aluguel local."</p>
+                        <div class="test-author">
+                            <div class="test-avatar">F</div>
+                            <div>
+                                <div class="test-name">Fernanda Costa</div>
+                                <div class="test-role">Moradora de Ciudad del Este</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-card">
+                        <div class="test-stars"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                        <p class="test-text">"A mentoria de adaptação salvou minha vida financeira nos primeiros meses. Dicas de onde fazer câmbio, quais mercados ir e como funciona a rotina na fronteira."</p>
+                        <div class="test-author">
+                            <div class="test-avatar">T</div>
+                            <div>
+                                <div class="test-name">Thiago Alves</div>
+                                <div class="test-role">Trabalha Remoto do PY</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-card">
+                        <div class="test-stars"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                        <p class="test-text">"Mudamos em família e o processo migratório que parecia complexo fluiu muito bem graças ao trabalho minucioso da equipe. Super recomendo!"</p>
+                        <div class="test-author">
+                            <div class="test-avatar">B</div>
+                            <div>
+                                <div class="test-name">Bruna e Marcos</div>
+                                <div class="test-role">Família Expatriada</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. FAQ -->
+        <section class="sec bg-alt" id="faq">
+            <div class="wrap">
+                <div class="rv center-head">
+                    <span class="eyebrow">Dúvidas Comuns</span>
+                    <h2>Perguntas <span class="gt"><em>Frequentes</em></span></h2>
+                </div>
+
+                <div class="faq-wrap rv">
+                    <details>
+                        <summary>Quanto tempo demora o processo de imigração?</summary>
+                        <p>O tempo pode variar, mas geralmente o processo inicial para a emissão da Cédula de Identidade Paraguaia e da residência temporária leva de 30 a 90 dias após a entrega de todos os documentos exigidos apostilados.</p>
+                    </details>
+
+                    <details>
+                        <summary>Eu preciso de Passaporte para morar no Paraguai?</summary>
+                        <p>Não obrigatoriamente. Como o Paraguai faz parte do Mercosul, você pode dar início ao processo migratório utilizando o seu RG brasileiro (desde que esteja em bom estado e emitido há menos de 10 anos).</p>
+                    </details>
+
+                    <details>
+                        <summary>Posso levar minha família (cônjuge e filhos)?</summary>
+                        <p>Sim! A legislação paraguaia permite que familiares dependentes também apliquem para a residência. Nossa assessoria organiza a documentação de todo o núcleo familiar (certidões de casamento, nascimento, etc) para a regularização conjunta.</p>
+                    </details>
+
+                    <details>
+                        <summary>O Paraguai é seguro para morar?</summary>
+                        <p>Como em qualquer país, existem áreas mais seguras e outras que exigem atenção. No geral, o Paraguai oferece uma boa qualidade de vida, e durante nossa Mentoria de Adaptação, indicamos os melhores bairros, dicas de segurança e o funcionamento da rotina na fronteira.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CTA FINAL -->
+        <section class="cta-footer">
+            <div class="wrap rv">
+                <h2>Pronto para mudar de vida?</h2>
+                <p>Entre em contato e descubra como a assessoria pode facilitar sua mudança para o Paraguai de forma 100% segura e legalizada.</p>
+                <a href="https://wa.me/595982515460?text=Olá%20Lara,%20estou%20pronto%20para%20mudar%20e%20preciso%20da%20Assessoria%20de%20Migração!" target="_blank" class="btn"><i class="whatsapp icon"></i> Quero a Assessoria de Migração</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="wrap">
+            <div class="logo">Facilita<span>Paraguai</span></div>
+            <p>Sua ponte segura para a imigração no Paraguai.</p>
+
+            <div class="social-links">
+                <a href="https://www.instagram.com/facilitaparaguai" aria-label="Instagram" target="_blank" rel="noopener"><i class="instagram icon"></i></a>
+                <a href="https://youtube.com/@facilitaparaguai" aria-label="YouTube" target="_blank" rel="noopener"><i class="youtube icon"></i></a>
+                <a href="https://tiktok.com/@facilitaparaguai" aria-label="TikTok" target="_blank" rel="noopener"><i class="tiktok icon"></i></a>
+                <a href="https://wa.me/595982515460" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="whatsapp icon"></i></a>
+            </div>
+
+            <p class="copy">&copy; <span id="year"></span> Facilita Paraguai. Todos os direitos reservados. <br> Feito com <i class="heart icon" style="color: var(--pink-main);"></i> por <a href="https://www.instagram.com/vitormed_" target="_blank" rel="noopener">@vitormed_</a></p>
+        </div>
+    </footer>
+
+    <script>
+    (function () {
+        'use strict';
+
+        // 1. Ano no rodapé
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // 2. Navbar sólida ao rolar
+        var nav = document.getElementById('nav');
+        window.addEventListener('scroll', function () {
+            nav.classList.toggle('solid', window.scrollY > 50);
+        }, { passive: true });
+
+        // 3. Reveal (IntersectionObserver)
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+
+        // 4. Fechar outras abas do FAQ ao abrir uma
+        const details = document.querySelectorAll('details');
+        details.forEach(targetDetail => {
+            targetDetail.addEventListener('click', () => {
+                details.forEach(detail => {
+                    if (detail !== targetDetail) {
+                        detail.removeAttribute('open');
+                    }
+                });
+            });
+        });
+
+    })();
+    </script>
+</body>
+</html>

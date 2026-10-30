@@ -197,6 +197,64 @@
         .rv { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s ease; }
         .rv.in { opacity: 1; transform: translateY(0); }
 
+        /* ================= DEPOIMENTOS (LOOP INFINITO) ================= */
+        .marquee-wrapper {
+            display: flex;
+            overflow: hidden;
+            user-select: none;
+            gap: 2rem;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            /* Máscara de gradiente para esmaecer as bordas */
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+        .marquee-track {
+            display: flex;
+            flex-shrink: 0;
+            gap: 2rem;
+            min-width: 100%;
+            /* Ajuste o tempo (35s) para deixar mais rápido ou mais lento */
+            animation: scrollMarquee 35s linear infinite;
+        }
+        /* Pausa a animação ao passar o mouse */
+        .marquee-wrapper:hover .marquee-track {
+            animation-play-state: paused;
+        }
+        @keyframes scrollMarquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-100% - 2rem)); }
+        }
+        
+        .test-card {
+            background: var(--bg-card);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 2rem;
+            width: 350px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            transition: .4s ease;
+        }
+        .test-card:hover {
+            border-color: var(--pink-light);
+            transform: translateY(-5px);
+        }
+        .test-stars { color: #f1c40f; font-size: 1rem; letter-spacing: 2px; }
+        .test-text {
+            font-size: .95rem; color: var(--mute); font-style: italic; line-height: 1.6; flex-grow: 1;
+        }
+        .test-author { display: flex; align-items: center; gap: 1rem; margin-top: auto; }
+        .test-avatar {
+            width: 45px; height: 45px; border-radius: 50%;
+            background: var(--pink-bg); color: var(--pink-main);
+            display: grid; place-items: center; font-weight: 700; font-size: 1.2rem; font-family: var(--font-title);
+        }
+        .test-name { font-weight: 600; color: var(--ink); font-size: .95rem; margin-bottom: .2rem; }
+        .test-role { font-size: .8rem; color: var(--mute); }
+
         @media (min-width: 768px) {
             .nav ul { display: flex; }
             .nav .btn { min-height: 52px; padding: 0 2rem; font-size: .95rem; }
@@ -378,6 +436,121 @@
             </div>
         </section>
 
+        <!-- 5.5 DEPOIMENTOS (LOOP INFINITO) -->
+        <section class="sec" id="depoimentos" style="overflow-x: hidden;">
+            <div class="wrap">
+                <div class="rv center-head">
+                    <span class="eyebrow">O que estão dizendo</span>
+                    <h2>Quem comprou o guia, <span class="gt"><em>recomenda</em></span></h2>
+                </div>
+            </div>
+
+            <!-- O wrapper lida com o overflow e a máscara de gradiente -->
+            <div class="marquee-wrapper rv">
+                <!-- GRUPO 1: Track principal -->
+                <div class="marquee-track">
+                    <div class="test-card">
+                        <div class="test-stars"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                        <p class="test-text">"Eu estava quase pagando R$ 2.000 em uma assessoria só pra me dizerem como matricular e tirar o visto. O guia da Lara me poupou todo esse dinheiro. Direto ao ponto!"</p>
+                        <div class="test-author">
+                            <div class="test-avatar">M</div>
+                            <div>
+                                <div class="test-name">Mariana Silva</div>
+                                <div class="test-role">Caloura de Medicina UCP</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-card">
+                        <div class="test-stars"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                        <p class="test-text">"A tabela de custo de vida e os bairros indicados salvaram meu orçamento. Eu ia alugar um apartamento super mal localizado, mas as dicas do guia mudaram tudo."</p>
+                        <div class="test-author">
+                            <div class="test-avatar">R</div>
+                            <div>
+                                <div class="test-name">Rafael Pereira</div>
+                                <div class="test-role">Morando em Ciudad del Este</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-card">
+                        <div class="test-stars"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                        <p class="test-text">"Comprar o guia foi a melhor decisão. Fui para o Paraguai com toda a documentação da Apostila de Haia pronta e organizada. Nenhuma dor de cabeça na imigração."</p>
+                        <div class="test-author">
+                            <div class="test-avatar">L</div>
+                            <div>
+                                <div class="test-name">Lucas Ferraz</div>
+                                <div class="test-role">Estudante PJC</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-card">
+                        <div class="test-stars"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                        <p class="test-text">"Deveria ser leitura obrigatória para todo brasileiro que quer ir para o Paraguai estudar Medicina. As orientações sobre convalidação de matérias me ajudaram muito!"</p>
+                        <div class="test-author">
+                            <div class="test-avatar">C</div>
+                            <div>
+                                <div class="test-name">Camila Ribeiro</div>
+                                <div class="test-role">Transferência de Faculdade</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GRUPO 2: Clone EXATO do Grupo 1 (Necessário para o loop perfeito não quebrar) -->
+                <div class="marquee-track" aria-hidden="true">
+                    <div class="test-card">
+                        <div class="test-stars"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                        <p class="test-text">"Eu estava quase pagando R$ 2.000 em uma assessoria só pra me dizerem como matricular e tirar o visto. O guia da Lara me poupou todo esse dinheiro. Direto ao ponto!"</p>
+                        <div class="test-author">
+                            <div class="test-avatar">M</div>
+                            <div>
+                                <div class="test-name">Mariana Silva</div>
+                                <div class="test-role">Caloura de Medicina UCP</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-card">
+                        <div class="test-stars"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                        <p class="test-text">"A tabela de custo de vida e os bairros indicados salvaram meu orçamento. Eu ia alugar um apartamento super mal localizado, mas as dicas do guia mudaram tudo."</p>
+                        <div class="test-author">
+                            <div class="test-avatar">R</div>
+                            <div>
+                                <div class="test-name">Rafael Pereira</div>
+                                <div class="test-role">Morando em Ciudad del Este</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-card">
+                        <div class="test-stars"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                        <p class="test-text">"Comprar o guia foi a melhor decisão. Fui para o Paraguai com toda a documentação da Apostila de Haia pronta e organizada. Nenhuma dor de cabeça na imigração."</p>
+                        <div class="test-author">
+                            <div class="test-avatar">L</div>
+                            <div>
+                                <div class="test-name">Lucas Ferraz</div>
+                                <div class="test-role">Estudante PJC</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-card">
+                        <div class="test-stars"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                        <p class="test-text">"Deveria ser leitura obrigatória para todo brasileiro que quer ir para o Paraguai estudar Medicina. As orientações sobre convalidação de matérias me ajudaram muito!"</p>
+                        <div class="test-author">
+                            <div class="test-avatar">C</div>
+                            <div>
+                                <div class="test-name">Camila Ribeiro</div>
+                                <div class="test-role">Transferência de Faculdade</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!-- 6. FAQ -->
         <section class="sec bg-alt" id="faq">
             <div class="wrap">

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <!-- SEO & Otimização -->
+    <title>Assessoria para Medicina no Paraguai | Facilita Paraguai - Lara Ribas</title>
+    <meta name="description" content="Tudo o que você precisa saber para realizar o sonho de ser médico estudando no Paraguai. Assessoria completa de matrícula, moradia e imigração.">
+    <meta name="keywords" content="Assessoria Medicina Paraguai, Estudar no Paraguai, UCP, Imigração Paraguai, Lara Ribas, Facilita Paraguai">
+    <meta name="author" content="Lara Ribas">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://www.facilitaparaguai.com.br/assessoria-medicina">
+
+    <!-- Open Graph (Redes Sociais) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Facilita Paraguai">
+    <meta property="og:title" content="Assessoria Especializada - Medicina no Paraguai">
+    <meta property="og:description" content="Sua jornada para a Medicina sem burocracia. Gestão de matrícula, assessoria migratória, consultoria imobiliária e mentoria de adaptação.">
+    <meta property="og:url" content="https://www.facilitaparaguai.com.br/assessoria-medicina">
+    <meta property="og:image" content="lara_poster.jpg">
+
+    <!-- Fontes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Fomantic UI Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css">
+
+    <style>
+        /* ================= VARIÁVEIS E RESET ================= */
+        :root {
+            --bg: #ffffff;
+            --bg-alt: #fdfafb;
+            --bg-card: #ffffff;
+            --ink: #2b2d42;
+            --mute: #6c757d;
+            --black: #000000;
+            --line: #f1e3e8;
+            --pink-main: #e84393;
+            --pink-light: #fd79a8;
+            --pink-bg: #fff0f5;
+            --grad: linear-gradient(135deg, var(--pink-light), var(--pink-main));
+            --pad: clamp(20px, 5vw, 56px);
+            --font-title: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        body { font-family: var(--font-body); background: var(--bg); color: var(--ink); line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+        h1, h2, h3, h4 { font-family: var(--font-title); color: var(--ink); font-weight: 600; }
+        em { font-style: italic; color: var(--pink-main); }
+        .gt { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .gt em { color: transparent; }
+        a { color: inherit; text-decoration: none; transition: .3s; }
+        p { color: var(--mute); font-size: 1rem; margin-bottom: 1rem; }
+
+        .wrap { max-width: 1160px; margin: 0 auto; padding: 0 var(--pad); }
+        .sec { padding: clamp(4.5rem, 11vw, 7rem) 0; }
+        .sec h2 { font-size: clamp(2.2rem, 5vw, 3.2rem); margin-bottom: 1rem; }
+
+        .eyebrow { display: inline-block; font-size: .75rem; letter-spacing: .15em; text-transform: uppercase; color: var(--pink-main); font-weight: 700; margin-bottom: 1rem; font-family: var(--font-body); background: var(--pink-bg); padding: .4rem 1rem; border-radius: 99px; }
+
+        /* BOTÕES */
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: .6rem; min-height: 52px; padding: 0 2rem; border-radius: 99px; background: var(--grad); color: #fff; font-weight: 600; font-size: .95rem; border: 0; cursor: pointer; transition: all .3s cubic-bezier(.2,.8,.2,1); box-shadow: 0 8px 25px rgba(232, 67, 147, 0.25); font-family: var(--font-body); text-align: center; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(232, 67, 147, 0.4); color: #fff; }
+        .btn.ghost { background: transparent; color: var(--pink-main); border: 2px solid var(--pink-main); box-shadow: none; }
+        .btn.ghost:hover { background: var(--pink-main); color: #fff; }
+        .btn.block { width: 100%; font-size: 1.1rem; padding: 18px; }
+
+        /* NAV */
+        .nav { position: fixed; inset: 0 0 auto 0; z-index: 50; display: flex; justify-content: space-between; align-items: center; padding: calc(15px + env(safe-area-inset-top, 0px)) var(--pad) 15px; transition: background .4s, box-shadow .4s; }
+        .nav.solid { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .logo { font-family: var(--font-title); font-size: 1.4rem; font-weight: 700; color: var(--ink); }
+        .logo span { color: var(--pink-main); }
+        .nav ul { display: none; list-style: none; gap: 28px; font-size: .9rem; font-weight: 500; }
+        .nav ul a:hover { color: var(--pink-main); }
+        .nav .btn { min-height: 44px; padding: 0 1.2rem; font-size: .85rem; }
+
+        /* HERO ESTÁTICO DE CONVERSÃO */
+        .hero-static { position: relative; padding: calc(8rem + env(safe-area-inset-top, 0px)) 0 5rem; background: linear-gradient(180deg, var(--pink-bg) 0%, var(--bg) 100%); overflow: hidden; text-align: center; }
+        .hero-static h1 { font-size: clamp(2.4rem, 6vw, 4rem); margin-bottom: 1.5rem; line-height: 1.1; color: var(--ink); max-width: 900px; margin-inline: auto; }
+        .hero-static p { color: var(--mute); font-size: clamp(1rem, 2vw, 1.15rem); max-width: 700px; margin: 0 auto 2.5rem; }
+        .hero-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; }
+
+        /* GRIDS & LAYOUTS */
+        .split { display: grid; gap: 4rem; align-items: center; }
+        .bg-alt { background-color: var(--bg-alt); }
+        .center-head { text-align: center; max-width: 700px; margin: 0 auto; }
+        
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 2rem; margin-top: 3rem; }
+        .card { background: var(--bg-card); padding: 2.5rem; border-radius: 24px; border: 1px solid var(--line); transition: .4s ease; display: flex; flex-direction: column; height: 100%; box-shadow: 0 5px 20px rgba(0,0,0,0.02); }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(232, 67, 147, 0.08); border-color: var(--pink-light); }
+        .card-icon { width: 50px; height: 50px; border-radius: 12px; background: var(--pink-bg); color: var(--pink-main); display: grid; place-items: center; font-size: 1.5rem; margin-bottom: 1.2rem; }
+        .card h3 { font-size: 1.3rem; margin-bottom: .8rem; }
+
+        /* VIDEOS YOUTUBE GRID */
+        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 2rem; margin-top: 3rem; }
+        .video-card { background: var(--bg-card); border-radius: 20px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0,0,0,0.04); transition: .3s; }
+        .video-card:hover { border-color: var(--pink-light); transform: translateY(-5px); }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        .video-info { padding: 1.5rem; text-align: center; }
+        .video-info h3 { font-size: 1.1rem; margin: 0; color: var(--ink); font-family: var(--font-body); font-weight: 600; }
+
+        /* SOBRE LARA */
+        .img-grid { position: relative; border-radius: 24px; overflow: hidden; aspect-ratio: 4/5; box-shadow: 0 20px 50px rgba(232, 67, 147, 0.15); }
+        .img-grid img { width: 100%; height: 100%; object-fit: cover; }
+        .mission-box { margin-top: 2rem; padding: 1.5rem; background: var(--pink-bg); border-left: 4px solid var(--pink-main); border-radius: 0 12px 12px 0; font-weight: 500; font-size: 1.05rem; color: var(--ink); font-style: italic; }
+
+        /* FAQ ACCORDION */
+        .faq-wrap { max-width: 800px; margin: 3rem auto 0; }
+        details { background: #fff; border: 1px solid var(--line); border-radius: 16px; margin-bottom: 1rem; overflow: hidden; transition: .3s; }
+        details:hover { border-color: var(--pink-light); box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
+        summary { padding: 1.5rem; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; font-size: 1.05rem; color: var(--ink); }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '\f067'; font-family: 'Icons'; font-weight: 900; color: var(--pink-main); transition: transform .3s; }
+        details[open] summary::after { transform: rotate(45deg); }
+        details p { padding: 0 1.5rem 1.5rem; margin: 0; color: var(--mute); font-size: .95rem; line-height: 1.7; }
+
+        /* FOOTER CTA */
+        .cta-footer { background: var(--grad); padding: 5rem 0; text-align: center; color: #fff; margin-top: 4rem; }
+        .cta-footer h2 { color: #fff; margin-bottom: 1rem; }
+        .cta-footer p { color: rgba(255,255,255,0.9); font-size: 1.1rem; max-width: 600px; margin: 0 auto 2rem; }
+        .cta-footer .btn { background: #fff; color: var(--pink-main); box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+        .cta-footer .btn:hover { background: var(--ink); color: #fff; }
+
+        /* FOOTER */
+        footer { background: var(--ink); color: #fff; padding: 4rem 0 calc(2rem + env(safe-area-inset-bottom, 0px)); text-align: center; }
+        footer .logo { color: #fff; font-size: 1.8rem; margin-bottom: 1rem; }
+        footer .logo span { color: var(--pink-light); }
+        .social-links { display: flex; justify-content: center; gap: 1rem; margin: 2rem 0; }
+        .social-links a { width: 45px; height: 45px; border-radius: 50%; background: rgba(255,255,255,0.1); display: grid; place-items: center; font-size: 1.2rem; color: #fff; }
+        .social-links a:hover { background: var(--pink-main); transform: translateY(-3px); }
+        footer p { color: rgba(255,255,255,0.5); font-size: .85rem; }
+        footer p.copy { margin-top: 2rem; }
+
+        /* ANIMAÇÕES (REVEAL) */
+        .rv { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s ease; }
+        .rv.in { opacity: 1; transform: translateY(0); }
+
+        /* ================= DEPOIMENTOS (LOOP INFINITO) ================= */
+        .marquee-wrapper {
+            display: flex;
+            overflow: hidden;
+            user-select: none;
+            gap: 2rem;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            /* Máscara de gradiente para esmaecer as bordas */
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+        .marquee-track {
+            display: flex;
+            flex-shrink: 0;
+            gap: 2rem;
+            min-width: 100%;
+            /* Ajuste o tempo (35s) para deixar mais rápido ou mais lento */
+            animation: scrollMarquee 35s linear infinite;
+        }
+        /* Pausa a animação ao passar o mouse */
+        .marquee-wrapper:hover .marquee-track {
+            animation-play-state: paused;
+        }
+        @keyframes scrollMarquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-100% - 2rem)); }
+        }
+        
+        .test-card {
+            background: var(--bg-card);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 2rem;
+            width: 350px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            transition: .4s ease;
+        }
+        .test-card:hover {
+            border-color: var(--pink-light);
+            transform: translateY(-5px);
+        }
+        .test-stars { color: #f1c40f; font-size: 1rem; letter-spacing: 2px; }
+        .test-text {
+            font-size: .95rem; color: var(--mute); font-style: italic; line-height: 1.6; flex-grow: 1;
+        }
+        .test-author { display: flex; align-items: center; gap: 1rem; margin-top: auto; }
+        .test-avatar {
+            width: 45px; height: 45px; border-radius: 50%;
+            background: var(--pink-bg); color: var(--pink-main);
+            display: grid; place-items: center; font-weight: 700; font-size: 1.2rem; font-family: var(--font-title);
+        }
+        .test-name { font-weight: 600; color: var(--ink); font-size: .95rem; margin-bottom: .2rem; }
+        .test-role { font-size: .8rem; color: var(--mute); }
+
+        @media (min-width: 768px) {
+            .nav ul { display: flex; }
+            .nav .btn { min-height: 52px; padding: 0 2rem; font-size: .95rem; }
+            .split { grid-template-columns: 1fr 1fr; }
+            .hero-static { padding: calc(10rem + env(safe-area-inset-top, 0px)) 0 8rem; }
+        }
+        @media (max-width: 480px) {
+            .nav .btn span { display: none; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .rv { opacity: 1; transform: none; transition: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="nav" id="nav">
+        <a href="index.html" class="logo">Facilita<span>Paraguai</span></a>
+        <ul>
+            <li><a href="#informacoes">O Curso</a></li>
+            <li><a href="#servicos">O que inclui</a></li>
+            <li><a href="#videos">UCP por dentro</a></li>
+            <li><a href="#sobre">Lara Ribas</a></li>
+        </ul>
+        <a href="index.html" class="btn ghost"><i class="arrow left icon"></i> Voltar</a>
+    </header>
+
+    <main>
+        <!-- 1. HERO -->
+        <section class="hero-static" id="topo">
+            <div class="wrap rv">
+                <span class="eyebrow">Assessoria Especializada</span>
+                <h1>Sua jornada para a Medicina <span class="gt"><em>sem burocracia</em></span></h1>
+                <p>Tudo o que você precisa saber para realizar o sonho de ser médico estudando no Paraguai, com suporte total desde a matrícula até a sua adaptação na cidade.</p>
+                <div class="hero-actions">
+                    <a href="#servicos" class="btn ghost">Conhecer Serviços</a>
+                    <a href="https://wa.me/595982515460?text=Olá%20Lara,%20gostaria%20de%20saber%20mais%20sobre%20a%20Assessoria%20de%20Medicina!" target="_blank" class="btn"><i class="whatsapp icon"></i> Quero a Assessoria de Medicina</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. INFORMAÇÕES GERAIS (Medicina no Paraguai) -->
+        <section class="sec" id="informacoes">
+            <div class="wrap">
+                <div class="rv center-head">
+                    <span class="eyebrow">Por que o Paraguai?</span>
+                    <h2>A realidade da <span class="gt"><em>Medicina</em></span> no exterior</h2>
+                </div>
+
+                <div class="cards-grid rv">
+                    <div class="card">
+                        <div class="card-icon"><i class="calendar alternate outline icon"></i></div>
+                        <h3>Duração do Curso</h3>
+                        <p>O curso de Medicina no Paraguai dura em média 6 anos, incluindo as fases de internato e a prática hospitalar obrigatória.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon"><i class="file alternate outline icon"></i></div>
+                        <h3>Processo de Matrícula</h3>
+                        <p>É possível iniciar em qualquer semestre. O processo leva em média 30 a 60 dias com toda a organização da documentação brasileira e paraguaia.</p>
+                    </div>
+
+                    <div class="card featured">
+                        <div class="card-icon"><i class="money bill alternate outline icon"></i></div>
+                        <h3>Investimento</h3>
+                        <p>As mensalidades variam de US$ 300 a US$ 800 dependendo da universidade, um valor incrivelmente mais acessível se comparado ao Brasil.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon"><i class="globe icon"></i></div>
+                        <h3>Revalidação no Brasil</h3>
+                        <p>O diploma paraguaio pode ser revalidado no Brasil através do exame nacional Revalida, permitindo que você exerça a profissão normalmente no país.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. O QUE INCLUI A ASSESSORIA -->
+        <section class="sec bg-alt" id="servicos">
+            <div class="wrap">
+                <div class="rv center-head">
+                    <span class="eyebrow">Como eu te ajudo</span>
+                    <h2>O que está <span class="gt"><em>incluso</em></span> na Assessoria?</h2>
+                    <p>Meu trabalho é resolver a parte chata e burocrática para que você se preocupe apenas com a sua mudança e os seus estudos.</p>
+                </div>
+
+                <div class="cards-grid rv">
+                    <div class="card">
+                        <div class="card-icon"><i class="id badge outline icon"></i></div>
+                        <h3>Gestão de Matrícula</h3>
+                        <p>Auxílio direto no ingresso à faculdade, preparação das pastas de documentos e trâmites de Apostilamento de Haia necessários para a inscrição na UCP.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon"><i class="passport icon"></i></div>
+                        <h3>Assessoria Migratória</h3>
+                        <p>Regularização documental sem burocracias: te acompanho na emissão de visto de estudante, carnê de imigração e cédula paraguaia.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon"><i class="home icon"></i></div>
+                        <h3>Consultoria Imobiliária</h3>
+                        <p>Localização do imóvel ideal para sua rotina, seja em Ciudad del Este ou Pedro Juan Caballero, garantindo segurança e compatibilidade com seu orçamento.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon"><i class="comments outline icon"></i></div>
+                        <h3>Mentoria de Adaptação</h3>
+                        <p>Dicas exclusivas sobre a vida na fronteira, câmbio de moeda, compras, saúde e segurança para que você se sinta em casa desde o primeiro dia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. VIDEOS (UCP POR DENTRO) -->
+        <section class="sec" id="videos">
+            <div class="wrap">
+                <div class="rv center-head">
+                    <span class="eyebrow">A sua futura casa</span>
+                    <h2>Veja a UCP <span class="gt"><em>por dentro</em></span></h2>
+                    <p>Acompanhe vídeos curtos mostrando a realidade da Universidade Central do Paraguai para você já ir se familiarizando.</p>
+                </div>
+
+                <div class="video-grid rv">
+                    <!-- VIDEO 1 -->
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <!-- Substitua o ID 'XXXXXXXXX' pelo ID real do vídeo do YouTube -->
+                            <iframe src="https://youtu.be/thJkvM-rzpE" title="Infraestrutura de ponta da UCP" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-info">
+                            <h3>Infraestrutura de ponta da UCP</h3>
+                        </div>
+                    </div>
+
+                    <!-- VIDEO 2 -->
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <iframe src="https://youtu.be/ARJyK70dpNo" title="Frota de ônibus gratuito para alunos" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-info">
+                            <h3>Frota de ônibus gratuito para alunos</h3>
+                        </div>
+                    </div>
+
+                    <!-- VIDEO 3 -->
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <iframe src="https://youtu.be/xbdBSu8F9LU" title="Espaço kids para os filhos" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-info">
+                            <h3>Espaço kids para os filhos</h3>
+                        </div>
+                    </div>
+
+                    <!-- VIDEO 4 -->
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <iframe src="https://youtu.be/Q4rZ_9C93SY" title="Internato no Paraguai e no Brasil" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-info">
+                            <h3>Internato no Paraguai e no Brasil</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SOBRE LARA RIBAS -->
+        <section class="sec bg-alt" id="sobre">
+            <div class="wrap split">
+                <div class="img-grid rv">
+                    <!-- Substitua pela imagem correta da Lara -->
+                    <img src="https://facilitaparaguai.com/assets/lara1-BVRDoIIc.jpg" alt="Lara Ribas Assessora UCP" loading="lazy">
+                </div>
+                <div class="rv">
+                    <span class="eyebrow">Assessora Credenciada UCP</span>
+                    <h2>Por que confiar na <span class="gt"><em>Lara?</em></span></h2>
+                    
+                    <p>Aos 17 anos, perdi meu pai. Diante desse desafio, me emancipei e decidi buscar meu sonho da Medicina no exterior. Passei 2 anos enfrentando infraestrutura precária, metodologia exaustiva e um forte impacto na minha saúde mental na Argentina.</p>
+                    
+                    <p>Foi então que vendi tudo o que tinha, reinvesti no meu futuro e vim para o Paraguai. Ingressei na UCP diretamente no 4º semestre por aproveitamento de matérias, e aqui encontrei excelência acadêmica, estrutura de ponta e qualidade de vida.</p>
+                    
+                    <div class="mission-box">
+                        "Minha missão é transformar a sua vinda para o Paraguai em uma experiência de sucesso, cuidando de cada detalhe para que você foque apenas no que importa: os seus estudos e o seu futuro."
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5.5 DEPOIMENTOS (LOOP INFINITO) -->
+        <section class="sec" id="depoimentos" style="overflow-x: hidden;">
+            <div class="wrap">
+                <div class="rv center-head">
+                    <span class="eyebrow">O que estão dizendo</span>
+                    <h2>Quem Contratou este serviço, <span class="gt"><em>recomenda</em></span></h2>
+                </div>
+            </div>
+
+            <!-- O wrapper lida com o overflow e a máscara de gradiente -->
+            <div class="marquee-wrapper rv">
+                <!-- GRUPO 1: Track principal -->
+                <div class="marquee-track">
+                    <div class="test-card">
+                        <div class="test-stars"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                        <p class="test-text">"Eu estava quase pagando R$ 2.000 em uma assessoria só pra me dizerem como matricular e tirar o visto. O guia da Lara me poupou todo esse dinheiro. Direto ao ponto!"</p>
+                        <div class="test-author">
+                            <div class="test-avatar">M</div>
+                            <div>
+                                <div class="test-name">Mariana Silva</div>
+                                <div class="test-role">Caloura de Medicina UCP</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-card">
+                        <div class="test-stars"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                        <p class="test-text">"A tabela de custo de vida e os bairros indicados salvaram meu orçamento. Eu ia alugar um apartamento super mal localizado, mas as dicas do guia mudaram tudo."</p>
+                        <div class="test-author">
+                            <div class="test-avatar">R</div>
+                            <div>
+                                <div class="test-name">Rafael Pereira</div>
+                                <div class="test-role">Morando em Ciudad del Este</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-card">
+                        <div class="test-stars"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                        <p class="test-text">"Comprar o guia foi a melhor decisão. Fui para o Paraguai com toda a documentação da Apostila de Haia pronta e organizada. Nenhuma dor de cabeça na imigração."</p>
+                        <div class="test-author">
+                            <div class="test-avatar">L</div>
+                            <div>
+                                <div class="test-name">Lucas Ferraz</div>
+                                <div class="test-role">Estudante PJC</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-card">
+                        <div class="test-stars"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                        <p class="test-text">"Deveria ser leitura obrigatória para todo brasileiro que quer ir para o Paraguai estudar Medicina. As orientações sobre convalidação de matérias me ajudaram muito!"</p>
+                        <div class="test-author">
+                            <div class="test-avatar">C</div>
+                            <div>
+                                <div class="test-name">Camila Ribeiro</div>
+                                <div class="test-role">Transferência de Faculdade</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GRUPO 2: Clone EXATO do Grupo 1 (Necessário para o loop perfeito não quebrar) -->
+                <div class="marquee-track" aria-hidden="true">
+                    <div class="test-card">
+                        <div class="test-stars"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                        <p class="test-text">"Eu estava quase pagando R$ 2.000 em uma assessoria só pra me dizerem como matricular e tirar o visto. O guia da Lara me poupou todo esse dinheiro. Direto ao ponto!"</p>
+                        <div class="test-author">
+                            <div class="test-avatar">M</div>
+                            <div>
+                                <div class="test-name">Mariana Silva</div>
+                                <div class="test-role">Caloura de Medicina UCP</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-card">
+                        <div class="test-stars"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                        <p class="test-text">"A tabela de custo de vida e os bairros indicados salvaram meu orçamento. Eu ia alugar um apartamento super mal localizado, mas as dicas do guia mudaram tudo."</p>
+                        <div class="test-author">
+                            <div class="test-avatar">R</div>
+                            <div>
+                                <div class="test-name">Rafael Pereira</div>
+                                <div class="test-role">Morando em Ciudad del Este</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-card">
+                        <div class="test-stars"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                        <p class="test-text">"Comprar o guia foi a melhor decisão. Fui para o Paraguai com toda a documentação da Apostila de Haia pronta e organizada. Nenhuma dor de cabeça na imigração."</p>
+                        <div class="test-author">
+                            <div class="test-avatar">L</div>
+                            <div>
+                                <div class="test-name">Lucas Ferraz</div>
+                                <div class="test-role">Estudante PJC</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-card">
+                        <div class="test-stars"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
+                        <p class="test-text">"Deveria ser leitura obrigatória para todo brasileiro que quer ir para o Paraguai estudar Medicina. As orientações sobre convalidação de matérias me ajudaram muito!"</p>
+                        <div class="test-author">
+                            <div class="test-avatar">C</div>
+                            <div>
+                                <div class="test-name">Camila Ribeiro</div>
+                                <div class="test-role">Transferência de Faculdade</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- 6. FAQ -->
+        <section class="sec" id="faq">
+            <div class="wrap">
+                <div class="rv center-head">
+                    <span class="eyebrow">Dúvidas Comuns</span>
+                    <h2>Perguntas <span class="gt"><em>Frequentes</em></span></h2>
+                </div>
+
+                <div class="faq-wrap rv">
+                    <details>
+                        <summary>Preciso saber espanhol para estudar Medicina no Paraguai?</summary>
+                        <p>A maioria das aulas, especialmente nos primeiros anos da UCP, possui suporte forte devido ao grande número de alunos brasileiros, e as provas são adaptadas. O espanhol será necessário na rotina e nas práticas clínicas futuras, mas você aprende com facilidade vivendo a imersão na fronteira.</p>
+                    </details>
+
+                    <details>
+                        <summary>O diploma é reconhecido no Brasil?</summary>
+                        <p>Sim. Para exercer a profissão no Brasil, após concluir o curso no Paraguai, você deverá ser aprovado no exame Revalida (ou programas equivalentes), processo pelo qual passam todos os médicos formados no exterior.</p>
+                    </details>
+
+                    <details>
+                        <summary>Quanto custa em média a faculdade de Medicina?</summary>
+                        <p>As mensalidades na UCP e outras universidades da região variam entre US$ 300 e US$ 800, sendo muito mais acessíveis que as faculdades particulares no Brasil (que costumam passar de R$ 8.000 mensais).</p>
+                    </details>
+
+                    <details>
+                        <summary>Como funciona o processo de matrícula?</summary>
+                        <p>O processo começa pela organização dos seus documentos escolares brasileiros, que precisam passar por registro em cartório e o Apostilamento de Haia. Nossa assessoria realiza toda a gestão documental para garantir que sua inscrição seja aceita sem devoluções.</p>
+                    </details>
+
+                    <details>
+                        <summary>Posso trabalhar enquanto estudo?</summary>
+                        <p>Medicina é um curso de período integral, o que torna o trabalho fixo tradicional muito difícil de conciliar. No entanto, com a documentação paraguaia regularizada pela nossa assessoria, você tem permissão legal para residir e, se necessário, realizar atividades autônomas que se adequem à sua grade horária.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CTA FINAL -->
+        <section class="cta-footer">
+            <div class="wrap rv">
+                <h2>Pronta para começar sua jornada na Medicina?</h2>
+                <p>Entre em contato pelo WhatsApp e descubra como a nossa assessoria pode te ajudar do início ao fim, cuidando de cada etapa do seu processo de mudança.</p>
+                <a href="https://wa.me/595982515460?text=Olá%20Lara,%20estou%20pronta%20para%20começar%20minha%20Assessoria%20de%20Medicina!" target="_blank" class="btn"><i class="whatsapp icon"></i> Quero a Assessoria de Medicina</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="wrap">
+            <div class="logo">Facilita<span>Paraguai</span></div>
+            <p>Sua ponte segura para a Medicina no Paraguai.</p>
+
+            <div class="social-links">
+                <a href="https://www.instagram.com/facilitaparaguai" aria-label="Instagram" target="_blank" rel="noopener"><i class="instagram icon"></i></a>
+                <a href="https://youtube.com/@facilitaparaguai" aria-label="YouTube" target="_blank" rel="noopener"><i class="youtube icon"></i></a>
+                <a href="https://tiktok.com/@facilitaparaguai" aria-label="TikTok" target="_blank" rel="noopener"><i class="tiktok icon"></i></a>
+                <a href="https://wa.me/595982515460" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="whatsapp icon"></i></a>
+            </div>
+
+            <p class="copy">&copy; <span id="year"></span> Facilita Paraguai. Todos os direitos reservados. <br> Feito com <i class="heart icon" style="color: var(--pink-main);"></i> por <a href="https://www.instagram.com/vitormed_" target="_blank" rel="noopener">@vitormed_</a></p>
+        </div>
+    </footer>
+
+    <script>
+    (function () {
+        'use strict';
+
+        // 1. Ano no rodapé
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // 2. Navbar sólida ao rolar
+        var nav = document.getElementById('nav');
+        window.addEventListener('scroll', function () {
+            nav.classList.toggle('solid', window.scrollY > 50);
+        }, { passive: true });
+
+        // 3. Reveal (IntersectionObserver)
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+
+        // 4. Fechar outras abas do FAQ ao abrir uma
+        const details = document.querySelectorAll('details');
+        details.forEach(targetDetail => {
+            targetDetail.addEventListener('click', () => {
+                details.forEach(detail => {
+                    if (detail !== targetDetail) {
+                        detail.removeAttribute('open');
+                    }
+                });
+            });
+        });
+
+    })();
+    </script>
+</body>
+</html>
